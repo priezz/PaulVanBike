@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Общие советы",
+    "type": "categories",
+    "desc": "",
+    "children": [
+    ]
+  },
+  {
+    "title": "Места в центре",
+    "desc": "",
+    "children": [
+      {
+        "title": "Музеи",
+        "type": "categories",
+        "desc": "",
+        "children": []
+      },
+      {
+        "title": "Рестораны",
+        "type": "categories",
+        "desc": "",
+        "children": [
+          {
+            "title": "Завтраки",
+            "type": "items",
+            "desc": "",
+            "children": [
+            ]
+          },
+          {
+            "title": "Китайские",
+            "desc": "",
+            "children": [
+              {
+                "title": "China-China",
+                "desc": "Афигенное место",
+                "image": "http://some.image.com/lala/1",
+                "address": "Tollenstraat 85",
+                "lat": "49.9376",
+                "lng": "76.2855"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

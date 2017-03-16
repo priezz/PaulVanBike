@@ -1,0 +1,7 @@
+{
+  "name": "paul_van_bike",
+  "dependencies": {
+    "react-native-scrollable-tab-view": "registry:dt/react-native-scrollable-tab-view#0.7.0+20170207015417",
+    "realm/react-native/index": "registry:dt/realm/react-native/index#0.0.0+20170207135627"
+  }
+}
