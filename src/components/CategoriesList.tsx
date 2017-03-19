@@ -8,22 +8,30 @@ import Button from 'react-native-button'
 
 
 interface Props {
-    items: Array<any>,
+    items: any[],
+    desc: string,
 }
 
 interface State {}
 
 export default class CategoriesList extends Component<Props, State> {
+    onPress = () => {
+        alert("It's working fine")
+    }
+
     render() {
-        const {items} = this.props
+        const {items, desc} = this.props
         return <View style={styles.container}>
+            <Text style={styles.text}>{desc}</Text>
+            {items.map((item: any, i: number) =>
+                <View key={i}>
+                    <Button onPress={this.onPress}>{item.title} ></Button>
+                </View>
+            )}
             {/*{data.type === 'categories'*/}
                 {/*? <CatList items={items.children || []}/>*/}
                 {/*: <ItemsList items={items.children || []}/>*/}
             {/*}*/}
-                <Text style={styles.text}>
-                    Welcome to React Natif!
-                </Text>
                 {/*<Button onPress={this.onPress}>*/}
                     {/*Hi there!*/}
                 {/*</Button>*/}
