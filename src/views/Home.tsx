@@ -1,39 +1,52 @@
 import React, { Component } from 'react'
 import {
     StyleSheet,
-    View
+    Image,
 } from 'react-native'
-// import Button from 'react-native-button'
+import {
+    Grid,
+    Row,
+} from 'react-native-easy-grid'
 
-import data from '../assets/data.json'
-import CategoriesList from './components/CategoriesList'
+import data from '../../assets/data.json'
+import CategoriesList from '../components/CategoriesList'
 
 
 interface Props {}
 interface State {}
 
-export default class App extends Component<Props, State> {
+export default class Home extends Component<Props, State> {
     render() {
-        return <View style={styles.container}>
-            <CategoriesList items={data}/>
-        </View>
+        return <Grid>
+            <Row size={21} style={styles.logoBox}>
+                <Image source={require('../../assets/logo.png')} style={styles.logo} resizeMode='contain'/>
+            </Row>
+            <Row size={79}>
+                <CategoriesList items={data.items} desc={data.desc} descStyle={{textAlign: 'center', fontSize: 16}}/>
+            </Row>
+        </Grid>
     }
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#eee',
+    } as React.ViewStyle,
+    logoBox: {
+        height: '25%',
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
     } as React.ViewStyle,
-
-    text: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+    logo: {
+        height: '95%',
+        tintColor: '#3A83BF',
+    } as React.ImageStyle,
+    copyright: {
+        paddingLeft: '5%',
+        fontSize: 12,
+        fontWeight: '200',
+        color: '#444',
     } as React.TextStyle,
 })
-
-
-// TODO: Publish 'CachedImage' package

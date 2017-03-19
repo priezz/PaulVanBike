@@ -20,6 +20,7 @@ interface Props {
     items: any,
     title?: string,
     desc?: string,
+    descStyle?: any,
     contentType: string,
 }
 interface State {}
@@ -30,9 +31,9 @@ export default class Content extends Component<Props, State> {
         return <Grid>
             <Row size={6}><TouchableOpacity style={styles.header} onPress={() => router.goBack()}>
                 <Icon name={`${Platform.OS === 'ios' ? 'ios' : 'md'}-arrow-back`} style={styles.backIcon}/>
-                <Text style={styles.headerText}>{title}</Text>
+                <Text style={styles.headerText} ellipsizeMode="tail">{title}</Text>
             </TouchableOpacity></Row>
-            <Row size={94}>
+            <Row size={94} style={{overflow: 'hidden', backgroundColor: 'transparent'}}>
                 {contentType === 'categories' && <CategoriesList {...this.props}/>}
                 {contentType === 'items' && <ItemsList {...this.props}/>}
             </Row>
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingHorizontal: 20,
         paddingVertical: 5,
+        // backgroundColor: 'tomato',
     } as React.ViewStyle,
     backIcon: {
         fontSize: 24,

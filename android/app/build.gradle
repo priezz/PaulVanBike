@@ -66,6 +66,7 @@ import com.android.build.OutputFile
  */
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -83,8 +84,8 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "com.paul_van_bike"
@@ -126,9 +127,24 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-code-push')
+
     compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
+
+    compile "com.android.support:appcompat-v7:24.2.1" // https://developer.android.com/topic/libraries/support-library/features.html
     compile "com.facebook.react:react-native:+"  // From node_modules
+    compile 'com.android.support:support-v4:+'
+//    compile "com.google.android.gms:play-services-base:+"
+//    compile 'com.google.android.gms:play-services-location:+'
+//    compile 'com.google.android.gms:play-services-maps:+'
+
+    /* For animated GIF support */
+//    compile 'com.facebook.fresco:animated-gif:0.11.0'
+    /* For WebP support, without animations */
+    compile 'com.facebook.fresco:webpsupport:0.11.0'
+    /* For WebP animation support */
+//    compile 'com.facebook.fresco:animated-webp:0.11.0'
 }
 
 // Run this once to be able to run the application with BUCK
