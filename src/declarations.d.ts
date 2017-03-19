@@ -6,6 +6,10 @@ declare module 'simple-react-mobx-router' {
     const value: any
     export default value
 }
+declare module 'sreact-native-text' {
+    const value: any
+    export default value
+}
 declare module 'mobx-react/native' {
     const value: any
     export default value

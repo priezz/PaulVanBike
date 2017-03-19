@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import {
     StyleSheet,
-    Text,
+    // Text,
     View,
-    ScrollView,
     TouchableOpacity,
-    Platform,
 } from 'react-native'
-// import Button from 'react-native-button'
+import Text from 'react-native-text'
 import Icon from 'react-native-vector-icons/Ionicons'
 import {
     Grid,
@@ -27,11 +25,11 @@ interface Props {
 
 interface State {}
 
-export default class CategoriesList extends Component<Props, State> {
+export default class Categories extends Component<Props, State> {
     nextView = (item: any): void => {
         /* Add 'item.title' (which is ignored by the router) in the end of the route for reactivity */
         const {title = ''} = this.props
-        console.log("CategoriesList/nextView", title, item.title)
+        console.log("Categories/nextView", title, item.title)
         if(item.type) router.go(`/content/${item.title}`, {
             items: item.items,
             contentType: item.type,
@@ -41,22 +39,21 @@ export default class CategoriesList extends Component<Props, State> {
     }
 
     itemsCount = (item: any): number => {
-        // console.log("CategoriesList/itemsCount()", item.title)
+        // console.log("Categories/itemsCount()", item.title)
         return item.type === 'items'
             ? item.items.length
             : item.items.reduce((acc, i) => acc + this.itemsCount(i), 0)
     }
 
     render() {
-        const {items = [], desc = '', descStyle} = this.props
+        const {items = []} = this.props
         let haveIcons = false
         items.forEach((item: Object) => {
             if(item.icon) haveIcons = true
         })
-        // console.debug("CategoriesList/render()", haveIcons)
+        console.debug("Categories/render()", haveIcons)
 
-        return <ScrollView style={styles.container} contentContainerStyle={styles.scrollView}>
-            {desc ? <Text style={[styles.desc, descStyle]}>{desc}</Text> : null}
+        return <View>
             {items.map((item: any, i: number) =>
                 (item.items || []).length
                     ? <View key={i} style={styles.row}>
@@ -75,18 +72,11 @@ export default class CategoriesList extends Component<Props, State> {
                     </View>
                     : null
             )}
-        </ScrollView>
+        </View>
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        // marginBottom: 30,
-    } as React.ViewStyle,
-    scrollView: {
-        // paddingBottom: 30,
-    } as React.ViewStyle,
     row: {
         height: 50,
         flexDirection: 'row',
@@ -109,23 +99,14 @@ const styles = StyleSheet.create({
     listItem: {
         width: '100%',
     } as React.ViewStyle,
-    desc: {
-        fontSize: 14,
-        fontWeight: '400',
-        color: '#888',
-        textAlign: 'justify',
-        margin: 10,
-        marginVertical: 20,
-        marginHorizontal: 40,
-    } as React.TextStyle,
     title: {
         fontSize: 17,
         fontWeight: '100',
         paddingLeft: 10,
-        color: '#666',
+        color: '#555',
     } as React.TextStyle,
     itemsCount: {
-        fontSize: 11,
+        fontSize: 12,
         fontWeight: '200',
         paddingRight: 10,
         color: '#3a83bf',
@@ -136,6 +117,7 @@ const styles = StyleSheet.create({
     } as React.TextStyle,
     forwardIcon: {
         fontSize: 18,
-        color: '#555',
+        fontWeight: '100',
+        color: '#777',
     }
 })

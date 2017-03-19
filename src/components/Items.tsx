@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import {
     StyleSheet,
-    Text,
+    // Text,
     View,
-    ScrollView,
-    TouchableOpacity,
     Image,
 } from 'react-native'
-// import Button from 'react-native-button'
+import Text from 'react-native-text'
 import Icon from 'react-native-vector-icons/Ionicons'
 import {
     Grid,
@@ -30,7 +28,7 @@ interface Props {
 
 interface State {}
 
-export default class ItemsList extends Component<Props, State> {
+export default class Items extends Component<Props, State> {
     getImage = (image: string): any => {
         const idx: number = image.indexOf("http://") + image.indexOf("https://")
         if(idx > -2) console.log({uri: image})
@@ -41,11 +39,10 @@ export default class ItemsList extends Component<Props, State> {
     }
 
     render() {
-        const {items = [], desc = ''} = this.props
+        const {items = []} = this.props
         // console.debug("CategoriesList/render()", haveIcons)
 
-        return <ScrollView style={styles.container} contentContainerStyle={styles.scrollView}>
-            {desc ? <Text style={styles.desc}>{desc}</Text> : null}
+        return <View>
             {items.map((item: any, i: number) =>
                 <View key={i} style={styles.item}>
                     <Text style={styles.itemTitle}>{item.title.toUpperCase()}</Text>
@@ -60,7 +57,7 @@ export default class ItemsList extends Component<Props, State> {
                             {item.phone ? <Text style={styles.itemDetails}>Телефон: {item.phone}</Text> : null}
                         </Col>
                         <Col size={30} style={[styles.right, styles.itemDetailsBox]}>
-                            {item.address ? <Link address={item.address}>
+                            {item.address ? <Link address={item.address + ', Den Haag, Nederland'}>
                                 <Icon name='ios-map-outline' style={styles.itemIcon}/>
                             </Link>: null}
                             {item.website ? <Link href={item.website}>
@@ -73,18 +70,11 @@ export default class ItemsList extends Component<Props, State> {
                     </Grid>
                 </View>
             )}
-        </ScrollView>
+        </View>
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingBottom: 40,
-    } as React.ViewStyle,
-    scrollView: {
-        paddingBottom: 30,
-    } as React.ViewStyle,
     centered: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -95,17 +85,8 @@ const styles = StyleSheet.create({
     right: {
         justifyContent: 'flex-end',
     },
-    desc: {
-        fontSize: 14,
-        fontWeight: '400',
-        color: '#888',
-        textAlign: 'left',
-        margin: 10,
-        marginTop: 20,
-        marginHorizontal: 40,
-    } as React.TextStyle,
     item: {
-        marginHorizontal: 40,
+        marginHorizontal: 30,
         marginTop: 30,
     } as React.ViewStyle,
     itemContent: {
@@ -116,13 +97,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     } as React.ViewStyle,
     itemTitle: {
-        fontSize: 15,
+        fontSize: 17,
         fontWeight: '600',
         color: '#000',
     } as React.TextStyle,
     itemDesc: {
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: '300',
+        // textAlign: 'justify',
         color: '#444',
         flex: 1,
         flexWrap: 'wrap',
@@ -135,7 +117,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     itemDetails: {
-        fontSize: 11,
+        fontSize: 14,
         fontWeight: '100',
         color: '#888',
     } as React.TextStyle,

@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import {
     Linking,
     Platform,
-    Text,
+    // Text,
     TouchableOpacity,
     StyleSheet,
 } from 'react-native'
+import Text from 'react-native-text'
 
 
 interface Props {

@@ -3653,6 +3653,10 @@ react-native-extended-stylesheet@^0.3.2:
     css-mediaquery "^0.1.2"
     object-resolve-path "^1.1.0"
 
+react-native-text@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-text/-/react-native-text-0.0.4.tgz#9875215509b53bd7818a41b9aa17ccbf886668ba"
+
 react-native-vector-icons@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.0.0.tgz#6a2f8f4c6ace613aed7748cd530809283e5b1538"
@@ -3660,9 +3664,9 @@ react-native-vector-icons@^4.0.0:
     lodash "^4.0.0"
     yargs "^6.3.0"
 
-react-native-webp@^0.3.1:
+"react-native-webp@https://github.com/christianbach/react-native-webp":
   version "0.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-webp/-/react-native-webp-0.3.1.tgz#5b3f8b973acc72faf1380f7f53d1810b1b5d600d"
+  resolved "https://github.com/christianbach/react-native-webp#0f62f7d5082f2518f3dc5c94acdf58b9ccfa1fb7"
   dependencies:
     react-native "*"
 

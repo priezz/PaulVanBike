@@ -41,8 +41,9 @@
 		"react-native-code-push": "Microsoft/react-native-code-push#735/head",
 		"react-native-easy-grid": "^0.1.8",
 		"react-native-extended-stylesheet": "^0.3.2",
+		"react-native-text": "^0.0.4",
 		"react-native-vector-icons": "^4.0.0",
-		"react-native-webp": "^0.3.1",
+		"react-native-webp": "https://github.com/christianbach/react-native-webp",
 		"simple-react-mobx-router": "^1.0.6"
 	},
 	"devDependencies": {

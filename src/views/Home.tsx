@@ -9,7 +9,7 @@ import {
 } from 'react-native-easy-grid'
 
 import data from '../../assets/data.json'
-import CategoriesList from '../components/CategoriesList'
+import List from '../components/List'
 
 
 interface Props {}
@@ -22,7 +22,7 @@ export default class Home extends Component<Props, State> {
                 <Image source={require('../../assets/logo.png')} style={styles.logo} resizeMode='contain'/>
             </Row>
             <Row size={79}>
-                <CategoriesList items={data.items} desc={data.desc} descStyle={{textAlign: 'center', fontSize: 16}}/>
+                <List contentType='categories' {...data} descStyle={{textAlign: 'center', fontSize: 16}}/>
             </Row>
         </Grid>
     }
@@ -43,10 +43,4 @@ const styles = StyleSheet.create({
         height: '95%',
         tintColor: '#3A83BF',
     } as React.ImageStyle,
-    copyright: {
-        paddingLeft: '5%',
-        fontSize: 12,
-        fontWeight: '200',
-        color: '#444',
-    } as React.TextStyle,
 })

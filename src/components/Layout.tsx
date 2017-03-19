@@ -3,11 +3,13 @@ import {
     StyleSheet,
     StatusBar,
 } from 'react-native'
-import Button from 'react-native-button'
+// import Button from 'react-native-button'
 import {
     Grid,
     Row
 } from 'react-native-easy-grid'
+
+import Link from '../components/Link'
 
 
 interface Props {
@@ -30,7 +32,7 @@ export default class Layout extends Component<Props, State> {
                 {this.props.children}
             </Row>
             <Row size={7} style={styles.footer}>
-                <Button style={styles.copyright}>Разработка приложения: DvaPlus d.o.o., mail@dvaplus.eu</Button>
+                <Link contentStyle={styles.copyright}>Разработка приложения: DvaPlus d.o.o., mail@dvaplus.eu</Link>
             </Row>
         </Grid>
     }
@@ -44,12 +46,14 @@ const styles = StyleSheet.create({
     } as React.ViewStyle,
     footer: {
         justifyContent: 'flex-start',
-        alignItems: 'center',
+        alignItems: 'flex-end',
     } as React.ViewStyle,
     copyright: {
-        paddingLeft: '5%',
+        paddingLeft: 15,
+        paddingBottom: 7,
         fontSize: 12,
         fontWeight: '200',
+        textAlign: 'left',
         color: '#444',
     } as React.TextStyle,
 })

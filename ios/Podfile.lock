@@ -7,46 +7,10 @@ PODS:
   - React/cxxreact (0.43.0-rc.0):
     - React/jschelpers
   - React/jschelpers (0.43.0-rc.0)
-  - React/RCTActionSheet (0.43.0-rc.0):
-    - React/Core
-  - React/RCTCameraRoll (0.43.0-rc.0):
-    - React/Core
-    - React/RCTImage
-  - React/RCTGeolocation (0.43.0-rc.0):
-    - React/Core
-  - React/RCTImage (0.43.0-rc.0):
-    - React/Core
-    - React/RCTNetwork
-  - React/RCTLinkingIOS (0.43.0-rc.0):
-    - React/Core
-  - React/RCTNetwork (0.43.0-rc.0):
-    - React/Core
-  - React/RCTPushNotification (0.43.0-rc.0):
-    - React/Core
-  - React/RCTSettings (0.43.0-rc.0):
-    - React/Core
-  - React/RCTText (0.43.0-rc.0):
-    - React/Core
-  - React/RCTVibration (0.43.0-rc.0):
-    - React/Core
-  - React/RCTWebSocket (0.43.0-rc.0):
-    - React/Core
   - Yoga (0.43.0-rc.0.React)
 
 DEPENDENCIES:
   - React/ART (from `../node_modules/react-native`)
-  - React/Core (from `../node_modules/react-native`)
-  - React/RCTActionSheet (from `../node_modules/react-native`)
-  - React/RCTCameraRoll (from `../node_modules/react-native`)
-  - React/RCTGeolocation (from `../node_modules/react-native`)
-  - React/RCTImage (from `../node_modules/react-native`)
-  - React/RCTLinkingIOS (from `../node_modules/react-native`)
-  - React/RCTNetwork (from `../node_modules/react-native`)
-  - React/RCTPushNotification (from `../node_modules/react-native`)
-  - React/RCTSettings (from `../node_modules/react-native`)
-  - React/RCTText (from `../node_modules/react-native`)
-  - React/RCTVibration (from `../node_modules/react-native`)
-  - React/RCTWebSocket (from `../node_modules/react-native`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
@@ -59,6 +23,6 @@ SPEC CHECKSUMS:
   React: d6c76d9302e368c3ca8857c8de1201fbde355a3f
   Yoga: f4b577e0938e68440da0f7f8704147fb2fceea14
 
-PODFILE CHECKSUM: 6ae454eec16afa2a21fa235b07c29f49725224b0
+PODFILE CHECKSUM: ee26f0a68284e5f74e590cffa53b627541b9cb68
 
 COCOAPODS: 1.2.1.beta.1

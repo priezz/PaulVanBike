@@ -4,7 +4,7 @@ import {
     Platform,
     LayoutAnimation,
     UIManager,
-    View,
+    // View,
 } from 'react-native'
 import codePush from 'react-native-code-push'
 import {observer} from 'mobx-react/native'
@@ -31,7 +31,7 @@ interface State {}
 
 /* Enable LayoutAnimation under Android */
 if (Platform.OS === 'android') {
-    // UIManager.setLayoutAnimationEnabledExperimental(true)
+    UIManager.setLayoutAnimationEnabledExperimental(true)
 }
 
 @codePush({
@@ -41,7 +41,7 @@ if (Platform.OS === 'android') {
 @observer export default class App extends Component<Props, State> {
     componentWillUpdate() {
         // console.log("App/componentWillUpdate()")
-        // LayoutAnimation.easeInEaseOut()
+        LayoutAnimation.easeInEaseOut()
     }
 
     render() {

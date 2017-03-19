@@ -11,20 +11,20 @@ target 'paul_van_bike' do
   # React
   pod 'React', path: '../node_modules/react-native', subspecs: [
   #pod 'React', :path => './Other Sources/ReactNative', :subspecs => [
-    'Core',
-    'RCTImage',
-    'RCTNetwork',
-    'RCTText',
-	'RCTWebSocket',
+    #'Core',
+    #'RCTImage',
+    #'RCTNetwork',
+    #'RCTText',
+	#'RCTWebSocket',
     'ART',
-    'RCTActionSheet',
+    #'RCTActionSheet',
     #'RCTAdSupport',
-    'RCTCameraRoll',
-    'RCTGeolocation',
-    'RCTPushNotification',
-    'RCTSettings',
-    'RCTVibration',
-    'RCTLinkingIOS',
+    #'RCTCameraRoll',
+    #'RCTGeolocation',
+    #'RCTPushNotification',
+    #'RCTSettings',
+    #'RCTVibration',
+    #'RCTLinkingIOS',
   ]
   pod 'Yoga', path: '../node_modules/react-native/ReactCommon/yoga'
 
