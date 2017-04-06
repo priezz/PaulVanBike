@@ -15,6 +15,7 @@ else
     BUNDLE="index.${PLATFORM}.bundle"
 fi
 BUNDLE_PATH="release/${VERSION}"
+CODEPUSH_NAME=`jq -r -M ".name" < package.json`
 SENTRY_TOKEN=`cat ~/.sentryclirc | grep --color=never 'token=' | sed 's|token=||'`
 SENTRY_URL=`cat ~/.sentryclirc | grep --color=never 'url=' | sed 's|url=||'`
 SENTRY_ORG=`jq -r -M ".sentry_org" < package.json`
@@ -44,6 +45,6 @@ curl "${SENTRY_URL}api/0/projects/${SENTRY_ORG}/${SENTRY_PROJECT}/releases/$VERS
 
 # Upload bundle to CodePush
 if [ "$2" != "--sentry-only" ]; then
-	code-push release BeStimulated-${PLATFORM} "${BUNDLE_PATH}" "${VERSION}" -d Staging --mandatory --noDuplicateReleaseError --des "${COMMIT}"
+	code-push release "${CODEPUSH_NAME}-${PLATFORM}" "${BUNDLE_PATH}" "${VERSION}" -d Staging --mandatory --noDuplicateReleaseError --des "${COMMIT}"
 fi
 
