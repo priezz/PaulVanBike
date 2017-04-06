@@ -30,8 +30,3 @@ declare module '*.json' {
     const value: any
     export default value
 }
-
-// declare module '*.png' {
-//     var _: any
-//     export default _
-// }

@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# TODO: Save releases as git tags
+
+if [ "$1" == "" ]; then
+	echo "Usage: ota <platform>"
+	exit 1
+fi
+
+PLATFORM=$1
+VERSION=`jq -r -M ".version_${PLATFORM}" < package.json`
+if [ "$PLATFORM" == "ios" ]; then
+    BUNDLE="main.jsbundle"
+else
+    BUNDLE="index.${PLATFORM}.bundle"
+fi
+BUNDLE_PATH="release/${VERSION}"
+SENTRY_TOKEN=`cat ~/.sentryclirc | grep --color=never 'token=' | sed 's|token=||'`
+SENTRY_URL=`cat ~/.sentryclirc | grep --color=never 'url=' | sed 's|url=||'`
+SENTRY_ORG=`jq -r -M ".sentry_org" < package.json`
+SENTRY_PROJECT=`jq -r -M ".sentry_project" < package.json`
+
+# Exit when any command fails
+set -e
+
+
+# Check for the uncommitted changes
+git diff-index --quiet HEAD -- || (echo "OTA ERROR: Uncommited changes found, exiting."; exit 1);
+
+COMMIT=`git rev-parse HEAD`
+
+# Create new release at Sentry
+curl "${SENTRY_URL}api/0/projects/${SENTRY_ORG}/${SENTRY_PROJECT}/releases/" -X POST -H "Authorization: Bearer ${SENTRY_TOKEN}" -H "Content-Type: application/json" -d "{\"version\": \"$VERSION\"}" | jq
+
+# Generate bundle and source map
+mkdir -p "${BUNDLE_PATH}"
+react-native bundle --entry-file index.${PLATFORM}.js --platform ${PLATFORM} --dev false --assets-dest "${BUNDLE_PATH}" --sourcemap-output "${BUNDLE_PATH}/${BUNDLE}.map" --bundle-output "${BUNDLE_PATH}/${BUNDLE}"
+
+# Upload bundle to Sentry
+curl "${SENTRY_URL}api/0/projects/${SENTRY_ORG}/${SENTRY_PROJECT}/releases/$VERSION/files/" -X POST -H "Authorization: Bearer ${SENTRY_TOKEN}" -F file="@${BUNDLE_PATH}/${BUNDLE}" -F name="/${BUNDLE}" | jq
+
+# Upload source map to Sentry
+curl "${SENTRY_URL}api/0/projects/${SENTRY_ORG}/${SENTRY_PROJECT}/releases/$VERSION/files/" -X POST -H "Authorization: Bearer ${SENTRY_TOKEN}" -F file="@${BUNDLE_PATH}/${BUNDLE}.map" -F name="/${BUNDLE}.map" | jq
+
+# Upload bundle to CodePush
+if [ "$2" != "--sentry-only" ]; then
+	code-push release BeStimulated-${PLATFORM} "${BUNDLE_PATH}" "${VERSION}" -d Staging --mandatory --noDuplicateReleaseError --des "${COMMIT}"
+fi
+

@@ -29,12 +29,13 @@ export default class Categories extends Component<Props, State> {
     nextView = (item: any): void => {
         /* Add 'item.title' (which is ignored by the router) in the end of the route for reactivity */
         const {title = ''} = this.props
-        console.log("Categories/nextView", title, item.title)
+        console.log("Categories/nextView()", title, item.title)
         if(item.type) router.go(`/content/${item.title}`, {
             items: item.items,
             contentType: item.type,
             desc: item.desc || '',
             title: (title ? title + ' / ' : '') + (item.title || ''),
+            image: item.image,
         })
     }
 
@@ -42,7 +43,7 @@ export default class Categories extends Component<Props, State> {
         // console.log("Categories/itemsCount()", item.title)
         return item.type === 'items'
             ? item.items.length
-            : item.items.reduce((acc, i) => acc + this.itemsCount(i), 0)
+            : item.items.reduce((acc: Number, i: Number) => acc + this.itemsCount(i), 0)
     }
 
     render() {
@@ -56,20 +57,18 @@ export default class Categories extends Component<Props, State> {
         return <View>
             {items.map((item: any, i: number) =>
                 (item.items || []).length
-                    ? <View key={i} style={styles.row}>
+                    ? <TouchableOpacity key={i} style={styles.row} onPress={() => this.nextView(item)}>
                         {haveIcons && <Col size={15} style={[styles.centered, styles.left]}>
                             {item.icon && <Icon name={`ios-${item.icon}-outline`} color={item.iconColor || '#71A6D0'} style={styles.icon}/>}
                         </Col>}
-                        <Col size={haveIcons ? 70: 85} style={[styles.centered, styles.underlined, styles.left]}>
-                            <TouchableOpacity style={styles.listItem} onPress={() => this.nextView(item)}>
-                                <Text style={styles.title}>{item.title}</Text>
-                            </TouchableOpacity>
+                        <Col size={haveIcons ? 70: 85} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.left]}>
+                            <Text style={styles.title}>{item.title}</Text>
                         </Col>
-                        <Col size={15} style={[styles.centered, styles.underlined, styles.right]}>
+                        <Col size={15} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.right]}>
                             <Text style={styles.itemsCount}>{this.itemsCount(item)}</Text>
                             <Icon name='ios-arrow-forward' style={styles.forwardIcon}/>
                         </Col>
-                    </View>
+                    </TouchableOpacity>
                     : null
             )}
         </View>
@@ -101,6 +100,7 @@ const styles = StyleSheet.create({
     } as React.ViewStyle,
     title: {
         fontSize: 17,
+        fontFamily: 'Roboto',
         fontWeight: '100',
         paddingLeft: 10,
         color: '#555',
@@ -109,7 +109,9 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontWeight: '200',
         paddingRight: 10,
-        color: '#3a83bf',
+        color: '#999',
+        // color: '#3a83bf',
+        // color: '#ff4f00',
     } as React.TextStyle,
     icon: {
         fontSize: 26,

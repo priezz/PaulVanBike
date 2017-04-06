@@ -47,6 +47,7 @@ export default {
     'simonis1.webp': require('../../assets/images/simonis1.webp'),
     'simoniscatch.webp': require('../../assets/images/simoniscatch.webp'),
     'smoke.webp': require('../../assets/images/smoke.webp'),
+    'teaser-citycenter.webp': require('../../assets/images/teaser-citycenter.webp'),
     'tgoudehooft.webp': require('../../assets/images/tgoudehooft.webp'),
     'thermenholiday.webp': require('../../assets/images/thermenholiday.webp'),
     'topbikes.webp': require('../../assets/images/topbikes.webp'),

@@ -6,17 +6,16 @@ import {
     Image,
 } from 'react-native'
 import Text from 'react-native-text'
-import Icon from 'react-native-vector-icons/Ionicons'
+// import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/Foundation'
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import {
     Grid,
     Col,
     Row,
 } from 'react-native-easy-grid'
 
-/* Run prom 'assets/images' directory to update:
-    rm -f ../../src/lib/images.ts; (echo "export default {"; for i in *.webp ; do echo "    '$i': require('../../assets/images/$i'),"; done; echo "}") > ../../src/lib/images.ts
-*/
-import images from '../lib/images'
+import getImage from '../lib/getImage'
 import Link from '../components/Link'
 
 
@@ -29,15 +28,6 @@ interface Props {
 interface State {}
 
 export default class Items extends Component<Props, State> {
-    getImage = (image: string): any => {
-        const idx: number = image.indexOf("http://") + image.indexOf("https://")
-        if(idx > -2) console.log({uri: image})
-        if(idx === -2) console.log(image)
-        else console.log(images[image])
-        if(idx > -2) return {uri: image}
-        else return images[image]
-    }
-
     render() {
         const {items = []} = this.props
         // console.debug("CategoriesList/render()", haveIcons)
@@ -47,7 +37,7 @@ export default class Items extends Component<Props, State> {
                 <View key={i} style={styles.item}>
                     <Text style={styles.itemTitle}>{item.title.toUpperCase()}</Text>
                     <View style={styles.itemContent}>
-                        {item.image ? <Image source={this.getImage(item.image)} style={styles.itemImage} resizeMode='cover'/> : null}
+                        {item.image ? <Image source={getImage(item.image)} style={styles.itemImage} resizeMode='cover'/> : null}
                         <Text style={styles.itemDesc}>{item.desc}</Text>
                     </View>
                     <Grid>
@@ -58,14 +48,17 @@ export default class Items extends Component<Props, State> {
                         </Col>
                         <Col size={30} style={[styles.right, styles.itemDetailsBox]}>
                             {item.address ? <Link address={item.address + ', Den Haag, Nederland'}>
-                                <Icon name='ios-map-outline' style={styles.itemIcon}/>
+                                <Icon name='compass' style={styles.itemIcon}/>
+                                {/*<Icon name='google-maps' style={styles.itemIcon}/>*/}
+                                {/*<Icon name='navigation' style={styles.itemIcon}/>*/}
                             </Link>: null}
                             {item.website ? <Link href={item.website}>
-                                <Icon name='ios-information-circle-outline' style={styles.itemIcon}/>
+                                <Icon name='web' style={styles.itemIcon}/>
                             </Link>: null}
-                            {/*{item.phone ? <Link phone={item.phone}>*/}
-                                {/*<Icon name='ios-call-outline' style={styles.itemIcon}/>*/}
-                            {/*</Link>: null}*/}
+                            {item.phone ? <Link phone={item.phone}>
+                                <Icon name='telephone' style={styles.itemIcon}/>
+                                {/*<Icon name='cellphone-android' style={styles.itemIcon}/>*/}
+                            </Link>: null}
                         </Col>
                     </Grid>
                 </View>
@@ -124,7 +117,8 @@ const styles = StyleSheet.create({
     itemIcon: {
         fontSize: 26,
         fontWeight: '700',
-        color: '#444',
+        // color: '#444',
+        color: '#71A6D0',
         marginHorizontal: 8,
     } as React.TextStyle,
     forwardIcon: {

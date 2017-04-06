@@ -58,7 +58,7 @@ export default class Link extends Component<Props, State> {
 
     render() {
         const {children, style, contentStyle} = this.props
-        console.debug("Link/render()", typeof children)
+        // console.debug("Link/render()", typeof children)
 
         return <TouchableOpacity onPress={this.navigate} style={style}>
             {typeof children === 'string' || typeof children[0] === 'string'

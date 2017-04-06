@@ -2,12 +2,12 @@ import { Platform, BackAndroid } from 'react-native'
 import Router from 'simple-react-mobx-router'
 
 import Home from '../views/Home'
-import Categories from '../views/Content'
+import Content from '../views/Content'
 
 
 const router = new Router({
         '/home': Home,
-        '/content': Categories,
+        '/content': Content,
     }, {
         defaultRoute: '/home', // <- default route
     }

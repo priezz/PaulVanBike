@@ -20,6 +20,7 @@ import List from '../components/List'
 interface Props {
     items: any,
     title?: string,
+    image?: string,
     desc?: string,
     descStyle?: any,
     contentType: string,
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
         color: '#222',
     },
     headerText: {
-        fontSize: 16,
+        fontSize: 17,
         color: '#000',
         paddingLeft: 14,
         paddingBottom: 2,

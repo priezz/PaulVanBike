@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
     StyleSheet,
     StatusBar,
+    Text,
 } from 'react-native'
 // import Button from 'react-native-button'
 import {
@@ -32,7 +33,7 @@ export default class Layout extends Component<Props, State> {
                 {this.props.children}
             </Row>
             <Row size={7} style={styles.footer}>
-                <Link contentStyle={styles.copyright}>Разработка приложения: DvaPlus d.o.o., mail@dvaplus.eu</Link>
+                <Link href='https://dvaplus.eu' contentStyle={styles.copyright}>Разработка приложения: DvaPlus d.o.o., <Text style={styles.copyrightLink}>www.dvaplus.eu</Text></Link>
             </Row>
         </Grid>
     }
@@ -55,5 +56,8 @@ const styles = StyleSheet.create({
         fontWeight: '200',
         textAlign: 'left',
         color: '#444',
+    } as React.TextStyle,
+    copyrightLink: {
+        color: '#71A6D0',
     } as React.TextStyle,
 })

@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
     } as React.ViewStyle,
     logo: {
         height: '95%',
-        tintColor: '#3A83BF',
+        // tintColor: '#3A83BF',
     } as React.ImageStyle,
 })
