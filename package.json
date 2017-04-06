@@ -2,7 +2,7 @@
 	"name": "paul_van_bike",
 	"full_name": "Paul van Bike",
 	"version": "1.0.0",
-	"version_ios": "1.0.0",
+	"version_ios": "1.0",
 	"version_android": "1.0.0",
 	"private": true,
 	"sentry_org": "dvaplus-doo",
