@@ -1,5 +1,5 @@
 {
-	"name": "paulvanbike",
+	"name": "paul_van_bike",
 	"full_name": "Paul van Bike",
 	"version": "0.2.0",
 	"version_ios": "0.2.0",
@@ -7,6 +7,7 @@
 	"private": true,
 	"sentry_org": "dvaplus-doo",
 	"sentry_project": "paulvanbike",
+	"codepush_app": "PaulVanBike",
 	"scripts": {
 		"test": "jest",
 		"preinstall": "rm -rf typings",
