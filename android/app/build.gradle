@@ -97,7 +97,7 @@ android {
         applicationId "com.dvaplus.paulvanbike"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 17041102
+        versionCode 17041201
         versionName "1.1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
