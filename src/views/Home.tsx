@@ -20,7 +20,7 @@ const logoBoxHeightPercentage = 21
 export default class Home extends Component<Props, State> {
     render() {
         const styles = StyleSheet.create(_styles)
-        console.debug("Home/render()", styles._logoBox.height, styles._logo.height)
+        console.debug("Home/render()", styles._logoBox.height, styles._logo.height, StyleSheet.value('$statusBarHeight'), StyleSheet.value('statusBarHeight'))
         return <Grid onLayout={() => this.forceUpdate()}>
             <Row size={logoBoxHeightPercentage} style={styles.logoBox}>
                 <Image source={require('../../assets/logo.png')} style={styles.logo} resizeMode='contain'/>
@@ -33,7 +33,7 @@ export default class Home extends Component<Props, State> {
     }
 }
 
-const logoBoxHeight = () => Dimensions.get('window').height * logoBoxHeightPercentage / 100
+const logoBoxHeight = () => Dimensions.get('window').height * logoBoxHeightPercentage / 100 - StyleSheet.value('$statusBarHeight')
 const _styles = {
     $outline: '$debug',
     container: {

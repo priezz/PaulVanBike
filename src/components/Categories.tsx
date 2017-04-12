@@ -59,8 +59,8 @@ export default class Categories extends Component<Props, State> {
                         {haveIcons && <Col size={15} style={[styles.centered]}>
                             {item.icon && <Icon name={`ios-${item.icon}-outline`} color={item.iconColor || '#71A6D0'} style={styles.icon}/>}
                         </Col>}
-                        <Col size={haveIcons ? 70: 85} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.left]}>
-                            <Text style={styles.title}>{item.title}</Text>
+                        <Col size={haveIcons ? 70: 85} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.left, styles.itemTitleBox]}>
+                            <Text style={styles.itemTitle}>{item.title.replace(/\s+/g, ' ').trim()}</Text>
                         </Col>
                         <Col size={15} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.right]}>
                             <Text style={styles.itemsCount}>{this.itemsCount(item)}</Text>
@@ -76,7 +76,7 @@ export default class Categories extends Component<Props, State> {
 const styles = StyleSheet.create({
     $outline: '$debug',
     row: {
-        height: '44rem',
+        height: '46rem',
         flexDirection: 'row',
         // marginHorizontal: 40,
         marginHorizontal: '30rem',
@@ -100,13 +100,15 @@ const styles = StyleSheet.create({
     listItem: {
         width: '100%',
     },// as RN.ViewStyle,
-    title: {
+    itemTitleBox: {
+        paddingHorizontal: '10rem',
+    },
+    itemTitle: {
         // fontSize: 17,
-        fontSize: '15rem',
+        fontSize: '16rem',
         fontFamily: Platform.OS === 'ios' ? 'Ubuntu' : 'Ubuntu-Regular',
         fontWeight: 'normal',
         // paddingLeft: 10,
-        paddingLeft: '10rem',
         color: '#555',
     },// as RN.TextStyle,
     itemsCount: {
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     },// as RN.TextStyle,
     icon: {
         // fontSize: 26,
-        fontSize: '23rem',
+        fontSize: '25rem',
         fontWeight: '700',
     },// as RN.TextStyle,
     forwardIcon: {

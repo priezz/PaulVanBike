@@ -36,7 +36,7 @@ export default class Layout extends Component<Props, State> {
                 {this.props.children}
             </Row>
             <Row size={7} style={styles.footer}>
-                <Link href='https://dvaplus.eu' contentStyle={styles.copyright}>Разработка приложения: DvaPlus d.o.o., <Text style={styles.copyrightLink}>www.dvaplus.eu</Text></Link>
+                <Link href='https://dvaplus.eu' contentStyle={styles.copyright}>Приложение разработано DvaPlus d.o.o. <Text style={styles.copyrightLink}>http://dvaplus.eu</Text></Link>
             </Row>
         </Grid></View>
     }
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         flex: 1,
         // backgroundColor: '#efefef',
         backgroundColor: '#f2f2f2',
-        paddingTop: Platform.OS === 'ios' ? '21rem' : StatusBar.currentHeight,
+        paddingTop: '$statusBarHeight',
         // backgroundColor: 'green',
     },// as RN.ViewStyle,
     footer: {
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
     } as RN.ViewStyle,
     copyright: {
         // paddingLeft: 15,
-        paddingLeft: '15rem',
+        paddingLeft: '10rem',
         // paddingBottom: 7,
-        paddingBottom: '7rem',
+        paddingBottom: '10rem',
         // fontSize: 12,
         fontSize: '11rem',
         fontWeight: '200',

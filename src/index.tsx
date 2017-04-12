@@ -4,6 +4,7 @@ import {
     LayoutAnimation,
     UIManager,
     Dimensions,
+    StatusBar,
 } from 'react-native'
 import codePush from 'react-native-code-push'
 import {observer} from 'mobx-react/native'
@@ -32,6 +33,7 @@ const debug = 0
 StyleSheet.build({
     debug: process.env.NODE_ENV === 'production' ? 0 : debug,
     rem: () => Math.pow(minScreenDimension / 360, 1/3),
+    statusBarHeight: () => Platform.OS === 'ios' ? 21 : StatusBar.currentHeight,
     color: {
         dark: '#212121',
         lessDark: '#2a2a2a',
