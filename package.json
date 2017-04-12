@@ -1,9 +1,9 @@
 {
 	"name": "paul_van_bike",
 	"full_name": "Paul van Bike",
-	"version": "1.0.0",
-	"version_ios": "1.0",
-	"version_android": "1.0.0",
+	"version": "1.1.0",
+	"version_ios": "1.1.0",
+	"version_android": "1.1.0",
 	"private": true,
 	"sentry_org": "dvaplus-doo",
 	"sentry_project": "paulvanbike",
@@ -13,17 +13,20 @@
 		"preinstall": "rm -rf typings",
 		"postinstall": "for module in node_modules/*; do rm -rf ${module}/node_modules/{react,react-native,.bin/react-native}; done; sed -ir 's|^\\s*listener\\s*=|if(props) listener =|g' node_modules/react-native/Libraries/Renderer/src/renderers/shared/shared/event/EventPluginHub.js",
 		"stop": "for i in $(lsof -nT -i4TCP:8081 | grep node | awk '{print $2}' | uniq); do kill $i; done",
-		"start": "yarn run stop && react-native start --reset-cache",
-		"android": "export VISUAL=idea; react-native run-android && react-native log-android",
+		"start": "yarn run stop && react-native start --skipflow",
+		"_start": "yarn run stop && react-native start --transformer node_modules/react-native-sm-transformer --skipflow",
+		"__start": "yarn run stop && react-native start --reset-cache",
+		"assets": "cd graphics/images && for f in *.png; do cwebp -q 80 -o \"${f%.*}.webp\" -resize 720 720 \"$f\"; done && for f in teaser-*.png; do cwebp -q 80 -o \"${f%.*}.webp\" -resize 720 240 \"$f\"; done && mv -f *.webp ../../assets/images/ && cd ../../assets/images && (echo -e 'interface ImagesFactory {[index: string]: any}\n\nexport default {'; for i in *.webp; do echo \"    '$i': require('../../assets/images/$i') as any,\"; done; echo '} as ImagesFactory') > ../../src/lib/images.ts && cd ../.. && tsc && exit 0",
+		"android": "export VISUAL=idea; yarn run run-android && react-native log-android",
 		"ios": "export VISUAL=idea; react-native run-ios && react-native log-ios",
 		"prebuild": "rm -rf build",
-		"build": "react-native link; cd assets/images && rm -f ../../src/lib/images.ts; (echo 'export default {'; for i in *.webp; do echo \"    '$i': require('../../assets/images/$i'),\"; done; echo '}') > ../../src/lib/images.ts && cd ../.. && tsc",
+		"build": "react-native link; tsc",
 		"server-bg": "yarn run start & sleep 12 && adb reverse tcp:8081 tcp:8081",
 		"install-android": "adb install -r android/app/build/outputs/apk/app-release.apk",
-		"run-android": "npm -s run server-bg; react-native run-android",
+		"run-android": "npm -s run server-bg; react-native run-android --main-activity ' com.dvaplus.paulvanbike.debug/com.dvaplus.paul_van_bike.MainActivity'",
 		"log-android": "export VISUAL=idea; yarn run server-bg && react-native log-android",
 		"log-android-device": "adb logcat -v time | grep --color=never ReactNativeJS | sed -r 's|./ReactNativeJS\\([0-9]+\\):\\s||'",
-		"build-android": "cd android && ./gradlew assembleRelease",
+		"build-android": "tsc; rm -f .buckd/sock; cd android && ./gradlew assembleRelease",
 		"build-run-android": "export VISUAL=idea; yarn run build-android && yarn run install-android && yarn run log-android",
 		"cleanup": "rm -rf android/build android/app/build .buckd/tmp android/.gradle; rm -rf ios/build; yarn cache clean; watchman watch-del-all; watchman watch-del $(pwd); cd android && ./gradlew clean;",
 		"reinstall": "rm -rf node_modules/*; yarn",
@@ -35,24 +38,28 @@
 		"ota-all": "npm -s run ota android; npm -s run ota ios"
 	},
 	"rnpm": {
-		"assets": ["./assets/fonts"]
+		"assets": [
+			"./assets/fonts"
+		]
 	},
 	"dependencies": {
 		"@types/raven": "^1.2.1",
 		"@types/react": "^15.0.21",
-		"@types/react-native": "^0.42.16",
+		"@types/react-native": "0.43",
 		"color-term-console": "^1.0.4",
-		"mobx": "^3.1.8",
-		"mobx-react": "^4.1.5",
+		"errio": "^1.2.2",
+		"mobx": "^3.1.9",
+		"mobx-react": "^4.1.7",
 		"raven-js": "^3.14.0",
 		"react": "16.0.0-alpha.6",
-		"react-native": "0.43.1",
+		"react-native": "^0.43.2",
 		"react-native-button": "^1.8.2",
-		"react-native-code-push": "2.0.1-beta",
+		"react-native-code-push": "2.0.2-beta",
 		"react-native-easy-grid": "^0.1.8",
 		"react-native-extended-stylesheet": "^0.3.2",
 		"react-native-text": "^0.0.4",
 		"react-native-vector-icons": "^4.0.1",
+		"react-native-view-transformer": "^0.0.28",
 		"react-native-webp": "https://github.com/christianbach/react-native-webp",
 		"simple-react-mobx-router": "^1.0.6"
 	},
@@ -64,8 +71,8 @@
 		"babel-preset-react-native": "1.9.1",
 		"babel-preset-react-native-stage-0": "^1.0.1",
 		"jest": "19.0.2",
-		"react-test-renderer": "~15.4.1",
-		"typings": "^2.1.0"
+		"react-native-sm-transformer": "^1.0.3",
+		"react-test-renderer": "15.5"
 	},
 	"jest": {
 		"preset": "react-native"

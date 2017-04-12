@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-import {
-    StyleSheet,
-    // Text,
+import RN, {
+    Text,
     View,
     TouchableOpacity,
+    Platform,
 } from 'react-native'
-import Text from 'react-native-text'
+import StyleSheet from 'react-native-extended-stylesheet'
 import Icon from 'react-native-vector-icons/Ionicons'
 import {
-    Grid,
     Col,
-    Row,
 } from 'react-native-easy-grid'
 
 import router from '../lib/router'
@@ -43,22 +41,22 @@ export default class Categories extends Component<Props, State> {
         // console.log("Categories/itemsCount()", item.title)
         return item.type === 'items'
             ? item.items.length
-            : item.items.reduce((acc: Number, i: Number) => acc + this.itemsCount(i), 0)
+            : item.items.reduce((acc: number, i: number) => acc + this.itemsCount(i), 0)
     }
 
     render() {
         const {items = []} = this.props
-        let haveIcons = false
-        items.forEach((item: Object) => {
+        let haveIcons: boolean = false
+        items.forEach((item: any) => {
             if(item.icon) haveIcons = true
         })
-        console.debug("Categories/render()", haveIcons)
+        // console.debug("Categories/render()", haveIcons)
 
         return <View>
             {items.map((item: any, i: number) =>
                 (item.items || []).length
                     ? <TouchableOpacity key={i} style={styles.row} onPress={() => this.nextView(item)}>
-                        {haveIcons && <Col size={15} style={[styles.centered, styles.left]}>
+                        {haveIcons && <Col size={15} style={[styles.centered]}>
                             {item.icon && <Icon name={`ios-${item.icon}-outline`} color={item.iconColor || '#71A6D0'} style={styles.icon}/>}
                         </Col>}
                         <Col size={haveIcons ? 70: 85} style={[styles.centered, i < items.length - 1 && styles.underlined, styles.left]}>
@@ -76,14 +74,17 @@ export default class Categories extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
+    $outline: '$debug',
     row: {
-        height: 50,
+        height: '44rem',
         flexDirection: 'row',
-        marginHorizontal: 40,
-    } as React.ViewStyle,
+        // marginHorizontal: 40,
+        marginHorizontal: '30rem',
+    },// as RN.ViewStyle,
     centered: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
     },
     left: {
         justifyContent: 'flex-start',
@@ -92,33 +93,40 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     underlined: {
-        borderBottomWidth: 1,
+        // borderBottomWidth: 1,
+        borderBottomWidth: '1rem',
         borderBottomColor: '#ddd',
     },
     listItem: {
         width: '100%',
-    } as React.ViewStyle,
+    },// as RN.ViewStyle,
     title: {
-        fontSize: 17,
-        fontFamily: 'Roboto',
-        fontWeight: '100',
-        paddingLeft: 10,
+        // fontSize: 17,
+        fontSize: '15rem',
+        fontFamily: Platform.OS === 'ios' ? 'Ubuntu' : 'Ubuntu-Regular',
+        fontWeight: 'normal',
+        // paddingLeft: 10,
+        paddingLeft: '10rem',
         color: '#555',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     itemsCount: {
-        fontSize: 12,
+        // fontSize: 12,
+        fontSize: '11rem',
         fontWeight: '200',
-        paddingRight: 10,
-        color: '#999',
+        // paddingRight: 10,
+        paddingRight: '10rem',
+        color: '#aaa',
         // color: '#3a83bf',
         // color: '#ff4f00',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     icon: {
-        fontSize: 26,
+        // fontSize: 26,
+        fontSize: '23rem',
         fontWeight: '700',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     forwardIcon: {
-        fontSize: 18,
+        // fontSize: 18,
+        fontSize: '17rem',
         fontWeight: '100',
         color: '#777',
     }

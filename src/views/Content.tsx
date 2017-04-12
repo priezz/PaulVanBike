@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
-import {
-    // Text,
-    StyleSheet,
+import RN, {
+    Text,
+    // StyleSheet,
     Platform,
     TouchableOpacity,
-    ScrollView,
+    // ScrollView,
 } from 'react-native'
 import {
     Grid,
     Row,
 } from 'react-native-easy-grid'
 import Icon from 'react-native-vector-icons/Ionicons'
-import Text from 'react-native-text'
+// import Text from 'react-native-text'
+import StyleSheet from 'react-native-extended-stylesheet'
 
 import router from '../lib/router'
 import List from '../components/List'
@@ -43,22 +44,32 @@ export default class Content extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
+    $outline: '$debug',
     header: {
         flexDirection: 'row',
-        paddingHorizontal: 20,
+        // paddingHorizontal: 20,
+        paddingHorizontal: '20rem',
         // paddingVertical: 5,
         justifyContent: 'flex-start',
         alignItems: 'center',
         // backgroundColor: 'tomato',
-    } as React.ViewStyle,
+    } as RN.ViewStyle,
     backIcon: {
-        fontSize: 24,
+        // fontSize: 24,
+        fontSize: '24rem',
         color: '#222',
     },
     headerText: {
-        fontSize: 17,
+        // fontSize: 17,
+        fontSize: '17rem',
+        fontFamily: 'UbuntuCondensed-Regular',
         color: '#000',
-        paddingLeft: 14,
-        paddingBottom: 2,
+        // paddingLeft: 14,
+        paddingLeft: '14rem',
+        // paddingRight: 20,
+        paddingRight: '20rem',
+        // paddingBottom: 2,
+        paddingBottom: '2rem',
+        // backgroundColor: 'tomato',
     },
 })

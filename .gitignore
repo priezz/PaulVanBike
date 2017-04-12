@@ -54,3 +54,7 @@ fastlane/screenshots
 typings
 
 ios/Pods
+
+.credentials.json
+
+._*

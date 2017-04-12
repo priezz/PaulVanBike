@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import {
-    StyleSheet,
+import RN, {
+    // StyleSheet,
+    Platform,
     StatusBar,
     Text,
+    View,
 } from 'react-native'
 // import Button from 'react-native-button'
+import StyleSheet from 'react-native-extended-stylesheet'
 import {
     Grid,
     Row
@@ -20,7 +23,7 @@ interface State {}
 
 export default class Layout extends Component<Props, State> {
     render() {
-        return <Grid style={styles.container}>
+        return <View style={styles.container}><Grid>
             <StatusBar
                 animated={true}
                 hidden={false}
@@ -35,29 +38,36 @@ export default class Layout extends Component<Props, State> {
             <Row size={7} style={styles.footer}>
                 <Link href='https://dvaplus.eu' contentStyle={styles.copyright}>Разработка приложения: DvaPlus d.o.o., <Text style={styles.copyrightLink}>www.dvaplus.eu</Text></Link>
             </Row>
-        </Grid>
+        </Grid></View>
     }
 }
 
 const styles = StyleSheet.create({
+    $outline: '$debug',
     container: {
         flex: 1,
-        backgroundColor: '#efefef',
-        paddingTop: 25,
-    } as React.ViewStyle,
+        // backgroundColor: '#efefef',
+        backgroundColor: '#f2f2f2',
+        paddingTop: Platform.OS === 'ios' ? '21rem' : StatusBar.currentHeight,
+        // backgroundColor: 'green',
+    },// as RN.ViewStyle,
     footer: {
         justifyContent: 'flex-start',
         alignItems: 'flex-end',
-    } as React.ViewStyle,
+        // backgroundColor: 'tomato',
+    } as RN.ViewStyle,
     copyright: {
-        paddingLeft: 15,
-        paddingBottom: 7,
-        fontSize: 12,
+        // paddingLeft: 15,
+        paddingLeft: '15rem',
+        // paddingBottom: 7,
+        paddingBottom: '7rem',
+        // fontSize: 12,
+        fontSize: '11rem',
         fontWeight: '200',
         textAlign: 'left',
         color: '#444',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     copyrightLink: {
         color: '#71A6D0',
-    } as React.TextStyle,
+    } as RN.TextStyle,
 })

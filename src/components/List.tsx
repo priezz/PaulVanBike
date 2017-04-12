@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import {
-    // Text,
+import RN, {
+    Text,
     Image,
     View,
-    StyleSheet,
     ScrollView,
     Dimensions,
 } from 'react-native'
-import Text from 'react-native-text'
+// import Text from 'react-native-text'
+import StyleSheet from 'react-native-extended-stylesheet'
 
 import getImage from '../lib/getImage'
 import Categories from './Categories'
@@ -25,14 +25,21 @@ interface Props {
 interface State {}
 
 export default class List extends Component<Props, State> {
+    // onRotate = () => this.forceUpdate()
+    // onRotate = () => {
+    //     console.debug("List/onRotate()", Dimensions.get('window').width)
+    //     setTimeout(() => this.forceUpdate(), 1000)
+    // }
+
     render() {
         const {contentType, desc, descStyle, image} = this.props
-        console.debug("List/render()", this.props.title, contentType, image)
-        const Desc = image ? Image : View
-        // return <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollContent}>
-        return <ScrollView style={styles.scrollContainer}>
+        const styles = StyleSheet.create(_styles)
+        // console.debug("List/render()", this.props.title, contentType, styles._image.height)
+
+        const Desc: React.ReactNode = image ? Image : View
+        return <ScrollView style={styles.scrollContainer} onLayout={() => this.forceUpdate()}>
             {/*{desc ? <Text style={[styles.desc, descStyle]}>{desc}</Text> : null}*/}
-            {desc ? <Desc source={getImage(image)} style={image && styles.image} resizeMode='contain'>
+            {desc ? <Desc source={getImage(image)} style={image && styles.image} resizeMode='cover'>
                 {image && <View style={styles.imageMask}/>}
                 <Text style={[styles.desc, descStyle, image && styles.imageText]} ellipsizeMode='tail'>{desc}</Text>
             </Desc> : null}
@@ -42,43 +49,55 @@ export default class List extends Component<Props, State> {
     }
 }
 
-const styles = StyleSheet.create({
+let _styles = {
+    $outline: '$debug',
+    $width: () => Dimensions.get('window').width,
+    // $imageHeight: () => Math.min(Dimensions.get('window').width, Dimensions.get('window').height) / 5,
+    $imageHeight: () => Dimensions.get('window').height / 5.5,
     scrollContainer: {
         flex: 1,
-        paddingBottom: 40,
-    } as React.ViewStyle,
-    // scrollContent: {
-    //     // paddingBottom: 30,
-    // } as React.ViewStyle,
+        // paddingBottom: 40,
+        paddingBottom: '40rem',
+    } as RN.ViewStyle,
     image: {
-        width: '100%',
-        height: Dimensions.get('window').width / 3,
+        width: () => '$width',
+        height: () => '$imageHeight',
         overflow: 'hidden',
-        marginTop: 10,
-        marginBottom: 25,
-        paddingHorizontal: 5,
-    },
+        // marginTop: 10,
+        marginTop: '8rem',
+        // marginBottom: 25,
+        marginBottom: '18rem',
+        // paddingHorizontal: 5,
+        // paddingHorizontal: '5rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },// as RN.ImageStyle,
     imageMask: {
         position: 'absolute',
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
+        width: () => '$width',
+        height: () => '$imageHeight',
         opacity: 0.3,
         backgroundColor: '#000',
-    },
+    },// as RN.ViewStyle,
     desc: {
-        width: '100%',
-        fontSize: 16,
-        fontWeight: '300',
+        // fontSize: 17,
+        fontSize: '16rem',
+        fontFamily: 'UbuntuCondensed-Regular',
         color: '#778',
-        // textAlign: 'justify',
-        textAlign: 'left',
-        paddingHorizontal: 30,
-        paddingVertical: 10,
-    } as React.TextStyle,
+        textAlign: 'center',
+        // paddingHorizontal: 30,
+        paddingHorizontal: '22rem',
+        // paddingVertical: 10,
+        paddingTop: '30rem',
+        paddingBottom: '15rem',
+    },// as RN.TextStyle,
     imageText: {
         color: '#fff',
-        maxHeight: Dimensions.get('window').width / 3,
-    } as React.TextStyle,,
-})
+        maxHeight: () => '$imageHeight',
+        paddingVertical: 0,
+        paddingTop: 0,
+        paddingBottom: 0,
+    },// as RN.TextStyle,
+}

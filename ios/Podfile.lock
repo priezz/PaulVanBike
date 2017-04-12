@@ -1,13 +1,13 @@
 PODS:
-  - React/ART (0.43.0-rc.0):
+  - React/ART (0.43.2):
     - React/Core
-  - React/Core (0.43.0-rc.0):
+  - React/Core (0.43.2):
     - React/cxxreact
-    - Yoga (= 0.43.0-rc.0.React)
-  - React/cxxreact (0.43.0-rc.0):
+    - Yoga (= 0.43.2.React)
+  - React/cxxreact (0.43.2):
     - React/jschelpers
-  - React/jschelpers (0.43.0-rc.0)
-  - Yoga (0.43.0-rc.0.React)
+  - React/jschelpers (0.43.2)
+  - Yoga (0.43.2.React)
 
 DEPENDENCIES:
   - React/ART (from `../node_modules/react-native`)
@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  React: d6c76d9302e368c3ca8857c8de1201fbde355a3f
-  Yoga: f4b577e0938e68440da0f7f8704147fb2fceea14
+  React: 4aac60ce5352066b707708d18937453f74c25980
+  Yoga: 6d5c57a774eb338c5d5ea79a11ffac57556bec37
 
 PODFILE CHECKSUM: ee26f0a68284e5f74e590cffa53b627541b9cb68
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.1.rc.1

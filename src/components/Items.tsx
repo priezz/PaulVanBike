@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
-import {
-    StyleSheet,
-    // Text,
+import RN, {
+    Text,
     View,
     Image,
+    Dimensions,
+    Platform,
 } from 'react-native'
-import Text from 'react-native-text'
-// import Icon from 'react-native-vector-icons/Ionicons'
-import Icon from 'react-native-vector-icons/Foundation'
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import StyleSheet from 'react-native-extended-stylesheet'
+import Icon from 'react-native-vector-icons/Ionicons'
 import {
     Grid,
     Col,
-    Row,
 } from 'react-native-easy-grid'
 
 import getImage from '../lib/getImage'
 import Link from '../components/Link'
+import LightBox from './LightBox'
 
 
 interface Props {
@@ -28,36 +27,61 @@ interface Props {
 interface State {}
 
 export default class Items extends Component<Props, State> {
+    onRotate = () => this.forceUpdate()
+
     render() {
         const {items = []} = this.props
         // console.debug("CategoriesList/render()", haveIcons)
 
-        return <View>
+        const activeImageWidth = Math.min(Dimensions.get('window').width, Dimensions.get('window').height)
+        return <View onLayout={this.onRotate}>
             {items.map((item: any, i: number) =>
                 <View key={i} style={styles.item}>
                     <Text style={styles.itemTitle}>{item.title.toUpperCase()}</Text>
                     <View style={styles.itemContent}>
-                        {item.image ? <Image source={getImage(item.image)} style={styles.itemImage} resizeMode='cover'/> : null}
+                        {item.image ? <View style={styles.lightBoxContainer}>
+                            <LightBox underlayColor='transparent'
+                                      backgroundColor='rgba(0,0,0, 0.9)'
+                                      swipeToDismiss={true}
+                                      activeProps={{
+                                             width: activeImageWidth,
+                                             height: activeImageWidth,
+                                             margin: 0,
+                                             marginVertical: 0,
+                                             marginTop: 0,
+                                             marginBottom: 0,
+                                             marginHorizontal: 0,
+                                             marginLeft: 0,
+                                             marginRight: 0,
+                                             padding: 0,
+                                             paddingVertical: 0,
+                                             paddingTop: 0,
+                                             paddingBottom: 0,
+                                             paddingHorizontal: 0,
+                                             paddingLeft: 0,
+                                             paddingRight: 0,
+                                        } as RN.ViewStyle}
+                            >
+                                <Image source={getImage(item.image)} style={styles.itemImage} resizeMode='cover'/>
+                            </LightBox>
+                        </View> : null}
                         <Text style={styles.itemDesc}>{item.desc}</Text>
                     </View>
-                    <Grid>
-                        <Col size={70}>
-                            {item.pricetag ? <Text style={styles.itemDetails}>Ценник: {item.pricetag}</Text> : null}
-                            {item.address ? <Text style={styles.itemDetails}>Адрес: {item.address}</Text> : null}
-                            {item.phone ? <Text style={styles.itemDetails}>Телефон: {item.phone}</Text> : null}
+                    <Grid style={styles.itemDetails}>
+                        <Col size={60}>
+                            {item.pricetag ? <Text style={styles.itemDetailsText}>Ценник: {item.pricetag}</Text> : null}
+                            {item.address ? <Text style={styles.itemDetailsText}>Адрес: {item.address}</Text> : null}
+                            {item.phone ? <Text style={styles.itemDetailsText}>Телефон: {item.phone}</Text> : null}
                         </Col>
-                        <Col size={30} style={[styles.right, styles.itemDetailsBox]}>
+                        <Col size={40} style={[styles.right, styles.itemDetailsIcons]}>
                             {item.address ? <Link address={item.address + ', Den Haag, Nederland'}>
-                                <Icon name='compass' style={styles.itemIcon}/>
-                                {/*<Icon name='google-maps' style={styles.itemIcon}/>*/}
-                                {/*<Icon name='navigation' style={styles.itemIcon}/>*/}
+                                <Icon name='ios-map-outline' style={styles.itemIcon}/>
                             </Link>: null}
                             {item.website ? <Link href={item.website}>
-                                <Icon name='web' style={styles.itemIcon}/>
+                                <Icon name='ios-globe-outline' style={styles.itemIcon}/>
                             </Link>: null}
                             {item.phone ? <Link phone={item.phone}>
-                                <Icon name='telephone' style={styles.itemIcon}/>
-                                {/*<Icon name='cellphone-android' style={styles.itemIcon}/>*/}
+                                <Icon name='ios-call-outline' style={styles.itemIcon}/>
                             </Link>: null}
                         </Col>
                     </Grid>
@@ -68,6 +92,7 @@ export default class Items extends Component<Props, State> {
 }
 
 const styles = StyleSheet.create({
+    $outline: '$debug',
     centered: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -79,50 +104,88 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     item: {
-        marginHorizontal: 30,
-        marginTop: 30,
-    } as React.ViewStyle,
+        // marginHorizontal: 30,
+        marginHorizontal: '30rem',
+        // marginTop: 25,
+        marginTop: '20rem',
+        // marginBottom: 15,
+        marginBottom: '15rem',
+    } as RN.ViewStyle,
     itemContent: {
         flexDirection: 'row',
-        paddingVertical: 8,
-    } as React.ViewStyle,
-    itemDetailsBox: {
+        // paddingVertical: 12,
+        paddingVertical: '11rem',
+    } as RN.ViewStyle,
+    itemDetails: {
+        alignItems: 'center',
+    } as RN.ViewStyle,
+    itemDetailsIcons: {
         flexDirection: 'row',
-    } as React.ViewStyle,
+    } as RN.ViewStyle,
     itemTitle: {
-        fontSize: 17,
-        fontWeight: '600',
+        // fontSize: 17,
+        fontFamily: Platform.OS === 'ios' ? 'Ubuntu' : 'Ubuntu-Regular',
+        fontWeight: 'bold',
+        fontSize: '17rem',
         color: '#000',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     itemDesc: {
-        fontSize: 16,
-        fontWeight: '300',
-        // textAlign: 'justify',
+        // fontSize: 18,
+        fontSize: '17rem',
+        fontFamily: 'UbuntuCondensed-Regular',
         color: '#444',
         flex: 1,
         flexWrap: 'wrap',
-    } as React.TextStyle,
+    },// as RN.TextStyle,
     itemImage: {
-        width: 90,
-        height: 90,
-        marginTop: 6,
-        marginRight: 10,
-        marginBottom: 10,
-    },
-    itemDetails: {
-        fontSize: 14,
-        fontWeight: '100',
-        color: '#888',
-    } as React.TextStyle,
+        // width: 90,
+        width: '80rem',
+        // height: 90,
+        height: '80rem',
+        // marginTop: 6,
+        marginTop: 1,
+        // marginRight: 10,
+        marginRight: '10rem',
+        // marginBottom: 10,
+        marginBottom: '10rem',
+    },// as RN.ImageStyle,
+    itemDetailsText: {
+        // fontSize: 14,
+        fontSize: '14rem',
+        // fontWeight: '100',
+        fontFamily: 'Ubuntu-Light',
+        color: '#777',
+    },// as RN.TextStyle,
     itemIcon: {
-        fontSize: 26,
+        // fontSize: 28,
+        fontSize: '28rem',
         fontWeight: '700',
         // color: '#444',
         color: '#71A6D0',
-        marginHorizontal: 8,
-    } as React.TextStyle,
+        // marginHorizontal: 10,
+        marginHorizontal: '10rem',
+    },// as RN.TextStyle,
     forwardIcon: {
-        fontSize: 18,
+        // fontSize: 18,
+        fontSize: '18rem',
         color: '#555',
-    }
+    },// as RN.TextStyle,
+    lightBoxContainer: {
+        // width: 90,
+        width: '90rem',
+        // height: 90,
+        height: '90rem',
+        // marginTop: 6,
+        // marginTop: 5,
+        marginTop: '5rem',
+        // marginRight: 10,
+        marginRight: '10rem',
+        // marginBottom: 10,
+        marginBottom: '10rem',
+    },
+    lightBox: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    } as RN.ViewStyle,
 })
