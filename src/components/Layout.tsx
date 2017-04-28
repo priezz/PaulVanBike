@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import RN, {
-    // StyleSheet,
     Platform,
     StatusBar,
     Text,
     View,
 } from 'react-native'
-// import Button from 'react-native-button'
 import StyleSheet from 'react-native-extended-stylesheet'
 import {
     Grid,
@@ -46,28 +44,22 @@ const styles = StyleSheet.create({
     $outline: '$debug',
     container: {
         flex: 1,
-        // backgroundColor: '#efefef',
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '$color.background',
         paddingTop: '$statusBarHeight',
-        // backgroundColor: 'green',
     },// as RN.ViewStyle,
     footer: {
         justifyContent: 'flex-start',
         alignItems: 'flex-end',
-        // backgroundColor: 'tomato',
     } as RN.ViewStyle,
     copyright: {
-        // paddingLeft: 15,
         paddingLeft: '10rem',
-        // paddingBottom: 7,
         paddingBottom: '10rem',
-        // fontSize: 12,
         fontSize: '11rem',
         fontWeight: '200',
         textAlign: 'left',
-        color: '#444',
+        color: '$color.normalText',
     },// as RN.TextStyle,
     copyrightLink: {
-        color: '#71A6D0',
+        color: '$color.link',
     } as RN.TextStyle,
 })

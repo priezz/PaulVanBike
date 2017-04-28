@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
     row: {
         height: '46rem',
         flexDirection: 'row',
-        // marginHorizontal: 40,
         marginHorizontal: '30rem',
     },// as RN.ViewStyle,
     centered: {
@@ -93,9 +92,8 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     underlined: {
-        // borderBottomWidth: 1,
         borderBottomWidth: '1rem',
-        borderBottomColor: '#ddd',
+        borderBottomColor: '$color.underline',
     },
     listItem: {
         width: '100%',
@@ -104,32 +102,24 @@ const styles = StyleSheet.create({
         paddingHorizontal: '10rem',
     },
     itemTitle: {
-        // fontSize: 17,
         fontSize: '16rem',
         fontFamily: Platform.OS === 'ios' ? 'Ubuntu' : 'Ubuntu-Regular',
         fontWeight: 'normal',
-        // paddingLeft: 10,
-        color: '#555',
+        color: '$color.normalText',
     },// as RN.TextStyle,
     itemsCount: {
-        // fontSize: 12,
         fontSize: '11rem',
         fontWeight: '200',
-        // paddingRight: 10,
         paddingRight: '10rem',
-        color: '#aaa',
-        // color: '#3a83bf',
-        // color: '#ff4f00',
+        color: '$color.ultraLightText',
     },// as RN.TextStyle,
     icon: {
-        // fontSize: 26,
         fontSize: '25rem',
         fontWeight: '700',
     },// as RN.TextStyle,
     forwardIcon: {
-        // fontSize: 18,
         fontSize: '17rem',
         fontWeight: '100',
-        color: '#777',
+        color: '$color.lightText',
     }
 })

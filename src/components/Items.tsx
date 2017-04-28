@@ -74,7 +74,7 @@ export default class Items extends Component<Props, State> {
                             {item.phone ? <Text style={styles.itemDetailsText}>Телефон: {item.phone}</Text> : null}
                         </Col>
                         <Col size={40} style={[styles.right, styles.itemDetailsIcons]}>
-                            {item.address ? <Link address={item.address + ', Den Haag, Nederland'}>
+                            {item.address_full ? <Link address={item.address_full}>
                                 <Icon name='ios-map-outline' style={styles.itemIcon}/>
                             </Link>: null}
                             {item.website ? <Link href={item.website}>
@@ -104,16 +104,12 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     item: {
-        // marginHorizontal: 30,
         marginHorizontal: '30rem',
-        // marginTop: 25,
         marginTop: '20rem',
-        // marginBottom: 15,
         marginBottom: '20rem',
     } as RN.ViewStyle,
     itemContent: {
         flexDirection: 'row',
-        // paddingVertical: 12,
         paddingVertical: '12rem',
     } as RN.ViewStyle,
     itemDetails: {
@@ -123,64 +119,42 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     } as RN.ViewStyle,
     itemTitle: {
-        // fontSize: 17,
         fontFamily: 'Ubuntu-Bold',
-        // fontFamily: Platform.OS === 'ios' ? 'Ubuntu' : 'Ubuntu-Regular',
-        // fontWeight: 'bold',
         fontSize: '17rem',
         color: '#000',
     },// as RN.TextStyle,
     itemDesc: {
-        // fontSize: 18,
         fontSize: '17rem',
         fontFamily: 'UbuntuCondensed-Regular',
-        color: '#444',
+        color: '$color.normalText',
         flex: 1,
         flexWrap: 'wrap',
     },// as RN.TextStyle,
     itemImage: {
-        // width: 90,
         width: '85rem',
-        // height: 90,
         height: '85rem',
-        // marginTop: 1,
-        // marginRight: 10,
         marginRight: '8rem',
-        // marginBottom: 10,
-        // marginBottom: '10rem',
     },// as RN.ImageStyle,
     itemDetailsText: {
-        // fontSize: 14,
         fontSize: '14rem',
-        // fontWeight: '100',
         fontFamily: 'Ubuntu-Light',
-        color: '#777',
+        color: '$color.lightText',
     },// as RN.TextStyle,
     itemIcon: {
-        // fontSize: 28,
         fontSize: '28rem',
         fontWeight: '700',
-        // color: '#444',
-        color: '#71A6D0',
-        // marginHorizontal: 10,
+        color: '$color.link',
         marginHorizontal: '10rem',
     },// as RN.TextStyle,
     forwardIcon: {
-        // fontSize: 18,
         fontSize: '18rem',
-        color: '#555',
+        color: '$color.normalText',
     },// as RN.TextStyle,
     lightBoxContainer: {
-        // width: 90,
         width: '90rem',
-        // height: 90,
         height: '90rem',
-        // marginTop: 6,
-        // marginTop: 5,
         marginTop: '5rem',
-        // marginRight: 10,
         marginRight: '10rem',
-        // marginBottom: 10,
         marginBottom: '10rem',
     },
     lightBox: {

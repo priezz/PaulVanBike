@@ -12,15 +12,15 @@
   dependencies:
     "@types/node" "*"
 
-"@types/react-native@0.43":
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.43.0.tgz#eee60406700c0fdf5f178961f085810f06a249e3"
+"@types/react-native@^0.43.6":
+  version "0.43.6"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.43.6.tgz#1800f77596694f3632e6c74897df2d965da01ac2"
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^15.0.21":
-  version "15.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.21.tgz#29d849427237c1463abfb7b370755ee3e5b5b375"
+"@types/react@*", "@types/react@^15.0.23":
+  version "15.0.23"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.23.tgz#f3facbef5290610f54242f00308759d3a3c27346"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -2518,7 +2518,7 @@ json-stringify-pretty-compact@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-stringify-pretty-compact/-/json-stringify-pretty-compact-1.0.2.tgz#abe8ae193feb19020dfeec74363be03d65821a31"
 
-json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
+json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
@@ -2836,9 +2836,9 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mobx-react@^4.1.7:
-  version "4.1.7"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.1.7.tgz#06ef67074e2bc56e8e997a944f113070430ba5dd"
+mobx-react@^4.1.8:
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.1.8.tgz#5b636c01c599bbee248c05c5aab6c77a41ab07f9"
   dependencies:
     hoist-non-react-statics "^1.2.0"
 
@@ -3216,11 +3216,9 @@ range-parser@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.0.3.tgz#6872823535c692e2c2a0103826afd82c2e0ff175"
 
-raven-js@^3.14.0:
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.14.0.tgz#94dda81d975fdc4a42f193db437cf70021d654e0"
-  dependencies:
-    json-stringify-safe "^5.0.1"
+raven-js@3:
+  version "3.14.2"
+  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.14.2.tgz#9db2ffdd282e999e9d75541d4fa018be8d5266f4"
 
 raw-body@~2.1.2:
   version "2.1.7"
@@ -3265,9 +3263,9 @@ react-native-easy-grid@^0.1.8:
   dependencies:
     lodash "^4.11.1"
 
-react-native-extended-stylesheet@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/react-native-extended-stylesheet/-/react-native-extended-stylesheet-0.3.2.tgz#1cfcb2652bbe384d1932131ae8598e5da99a56cc"
+react-native-extended-stylesheet@0.4:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-extended-stylesheet/-/react-native-extended-stylesheet-0.4.0.tgz#10b966e30c1b84cbf8f44c88dcf05bdac975ac62"
   dependencies:
     css-mediaquery "^0.1.2"
     object-resolve-path "^1.1.0"
@@ -3285,10 +3283,6 @@ react-native-scroller@0.0.6:
 react-native-sm-transformer@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/react-native-sm-transformer/-/react-native-sm-transformer-1.0.3.tgz#ef3cea1fa4c1815ce8cefdbffbebb6e2745e4852"
-
-react-native-text@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-native-text/-/react-native-text-0.0.4.tgz#9875215509b53bd7818a41b9aa17ccbf886668ba"
 
 react-native-vector-icons@^4.0.1:
   version "4.0.1"
@@ -3310,94 +3304,9 @@ react-native-view-transformer@^0.0.28:
   dependencies:
     react-native "*"
 
-react-native@*:
-  version "0.43.2"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.43.2.tgz#83cdb23d7a9cba207acbb52ad2f0b167df9b42b0"
-  dependencies:
-    absolute-path "^0.0.0"
-    art "^0.10.0"
-    async "^2.0.1"
-    babel-core "^6.21.0"
-    babel-generator "^6.21.0"
-    babel-plugin-external-helpers "^6.18.0"
-    babel-plugin-syntax-trailing-function-commas "^6.20.0"
-    babel-plugin-transform-async-to-generator "6.16.0"
-    babel-plugin-transform-flow-strip-types "^6.21.0"
-    babel-plugin-transform-object-rest-spread "^6.20.2"
-    babel-polyfill "^6.20.0"
-    babel-preset-es2015-node "^6.1.1"
-    babel-preset-fbjs "^2.1.0"
-    babel-preset-react-native "^1.9.1"
-    babel-register "^6.18.0"
-    babel-runtime "^6.20.0"
-    babel-traverse "^6.21.0"
-    babel-types "^6.21.0"
-    babylon "^6.14.1"
-    base64-js "^1.1.2"
-    bser "^1.0.2"
-    chalk "^1.1.1"
-    commander "^2.9.0"
-    concat-stream "^1.6.0"
-    connect "^2.8.3"
-    core-js "^2.2.2"
-    debug "^2.2.0"
-    denodeify "^1.2.1"
-    event-target-shim "^1.0.5"
-    fbjs "~0.8.9"
-    fbjs-scripts "^0.7.0"
-    form-data "^2.1.1"
-    fs-extra "^0.26.2"
-    glob "^5.0.15"
-    graceful-fs "^4.1.3"
-    image-size "^0.3.5"
-    immutable "~3.7.6"
-    imurmurhash "^0.1.4"
-    inquirer "^0.12.0"
-    jest-haste-map "19.0.0"
-    joi "^6.6.1"
-    json-stable-stringify "^1.0.1"
-    json5 "^0.4.0"
-    left-pad "^1.1.3"
-    lodash "^4.16.6"
-    mime "^1.3.4"
-    mime-types "2.1.11"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    node-fetch "^1.3.3"
-    npmlog "^2.0.4"
-    opn "^3.0.2"
-    optimist "^0.6.1"
-    plist "^1.2.0"
-    promise "^7.1.1"
-    react-clone-referenced-element "^1.0.1"
-    react-devtools-core "^2.0.8"
-    react-timer-mixin "^0.13.2"
-    react-transform-hmr "^1.0.4"
-    rebound "^0.0.13"
-    regenerator-runtime "^0.9.5"
-    request "^2.79.0"
-    rimraf "^2.5.4"
-    sane "~1.4.1"
-    semver "^5.0.3"
-    shell-quote "1.6.1"
-    source-map "^0.5.6"
-    stacktrace-parser "^0.1.3"
-    temp "0.8.3"
-    throat "^3.0.0"
-    uglify-js "^2.6.2"
-    whatwg-fetch "^1.0.0"
-    wordwrap "^1.0.0"
-    worker-farm "^1.3.1"
-    write-file-atomic "^1.2.0"
-    ws "^1.1.0"
-    xcode "^0.8.9"
-    xmldoc "^0.4.0"
-    xpipe "^1.0.5"
-    yargs "^6.4.0"
-
-react-native@^0.43.3:
-  version "0.43.3"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.43.3.tgz#4f8e0d8d88827553789c02ef21cbc1afb68474d0"
+react-native@*, react-native@0.43.4:
+  version "0.43.4"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.43.4.tgz#92fb6937ab415b2e5612835a93a61845de98eb4d"
   dependencies:
     absolute-path "^0.0.0"
     art "^0.10.0"

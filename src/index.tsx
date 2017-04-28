@@ -27,7 +27,6 @@ errorReporterInit({
 })
 
 const minScreenDimension = Math.min(Dimensions.get('window').width, Dimensions.get('window').height)
-// const maxScreenDimension = Math.max(Dimensions.get('window').width, Dimensions.get('window').height)
 
 const debug = 0
 StyleSheet.build({
@@ -35,13 +34,14 @@ StyleSheet.build({
     rem: () => Math.pow(minScreenDimension / 360, 1/3),
     statusBarHeight: () => Platform.OS === 'ios' ? 21 : StatusBar.currentHeight,
     color: {
-        dark: '#212121',
-        lessDark: '#2a2a2a',
-        accent: '#FC4D75',
-        darkest: '#171717',
-        light: '#ebebeb',
-        darker: '#a3a6a9',
-        lighter: '#ffffff',
+        background: '#f2f2f2',
+        boldText: '#000',
+        normalText: '#444',
+        lightText: '#777',
+        ultraLightText: '#aaa',
+        link: '#71A6D0',
+        underline: '#ddd',
+        // lighter: '#ffffff',
     },
 })
 

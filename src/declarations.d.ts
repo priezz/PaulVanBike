@@ -39,10 +39,6 @@ declare module 'simple-react-mobx-router' {
     const value: any
     export default value
 }
-declare module 'react-native-text' {
-    const value: any
-    export default value
-}
 declare module 'react-native-vector-icons/Foundation' {
     const value: any
     export default value

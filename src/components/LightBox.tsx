@@ -2,7 +2,6 @@ import React, {
 	Component,
 	Children,
 	cloneElement,
-	// PropTypes,
 } from 'react'
 import RN, {
 	Animated,
@@ -168,7 +167,7 @@ class LightboxOverlay extends Component<LightBoxOverlayProps, LightBoxOverlaySta
 		springConfig: {
 			tension: 30,
 			friction: 7,
-			// Native animations work better on Android, but sometimes still have issues on iOS
+			/* Native animations work better on Android, but sometimes still have issues on iOS */
 			useNativeDriver: Platform.OS === 'android',
 		},
 		animateOpening: true,
@@ -379,7 +378,6 @@ const _styles = {
         flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		// Android pan handlers crash without this declaration:
 	},
 	header: {
 		position: 'absolute',
@@ -389,19 +387,15 @@ const _styles = {
 		backgroundColor: 'transparent',
 	},
 	closeButton: {
-		// fontSize: 35,
 		fontSize: '35rem',
 		color: 'white',
 		lineHeight: 40,
-		// lineHeight: '40rem',
-		// width: 40,
 		width: '40rem',
 		textAlign: 'center',
 		shadowOffset: {
 			width: 0,
 			height: 0,
 		},
-		// shadowRadius: 1.5,
 		shadowRadius: '1.5rem',
 		shadowColor: 'black',
 		shadowOpacity: 0.8,
