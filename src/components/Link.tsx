@@ -40,9 +40,10 @@ export default class Link extends Component<Props, State> {
 
     private static navigateToAddress(address: string) {
         /* Map URL schemas: http://stackoverflow.com/a/34359246/3445280 */
+        address = address.replace(/,/g, '+')
         const link = Platform.OS === 'ios'
             ? 'maps:?saddr=Current Location&daddr=' + address
-            : 'geo:0,0?q=' + address.replace(',', '+')
+            : 'geo:0,0?q=' + address
         Link._navigate(link)
     }
 
