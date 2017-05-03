@@ -11,6 +11,10 @@ import StyleSheet from 'react-native-extended-stylesheet'
 interface Props {
     href?: string,
     address?: string,
+    coords?: {
+        lat: number,
+        lng: number,
+    },
     phone?: string,
     style?: any,
     contentStyle?: any,
@@ -22,9 +26,9 @@ interface State {}
 export default class Link extends Component<Props, State> {
     navigate = () => {
         // console.debug("Link/navigate()")
-        const {href, address, phone} = this.props
+        const { href, address, phone, coords = { lat: Infinity, lng: Infinity }} = this.props
 
-        if (address) Link.navigateToAddress(address)
+        if (address) Link.navigateToAddress(address, coords)
         if (href) Link.navigateToUrl(href)
         if (phone) Link.navigateToPhone(phone)
     }
@@ -38,20 +42,17 @@ export default class Link extends Component<Props, State> {
         } catch (e) { }
     }
 
-    private static navigateToAddress(address: string) {
-        /* Map URL schemas: http://stackoverflow.com/a/34359246/3445280 */
-        address = address.replace(/,/g, '+')
+    private static navigateToAddress(address: string, { lat = Infinity, lng = Infinity }: { lat: number, lng: number }) {
+        /* Map URL schemas:
+            http://stackoverflow.com/a/34359246/3445280
+            https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
+        */
+        address = address.replace(/ /g, '+')
+        const coords = lat !== Infinity && lng !== Infinity ? `${lat},${lng}` : ''
         const link = Platform.OS === 'ios'
-            ? 'maps:?saddr=Current Location&daddr=' + address
-            : 'geo:0,0?q=' + address
-        Link._navigate(link)
-    }
-
-    private static navigateToCoords(lat: number, lng: number) {
-        /* Map URL schemas: http://stackoverflow.com/a/34359246/3445280 */
-        const link = Platform.OS === 'ios'
-            ? `maps:?saddr=Current Location&daddr=${lat},${lng}`
-            : `geo:${lat},${lng}?q=${lat},${lng}`
+            ? `maps:?sll=${coords}&address=${address}&daddr=${address}&t=m`
+            // ? `maps:?sll=${coords}&near=${coords}&daddr=${address}&t=m`
+            : `geo:${lat},${lng}?q=${address}`
         Link._navigate(link)
     }
 

@@ -2,19 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/node@*":
-  version "7.0.12"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.12.tgz#ae5f67a19c15f752148004db07cbbb372e69efc9"
-
-"@types/raven@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@types/raven/-/raven-1.2.1.tgz#69af2bf43716378eb0d0ffe3e6e190bf220741ff"
-  dependencies:
-    "@types/node" "*"
-
-"@types/react-native@^0.43.6":
-  version "0.43.6"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.43.6.tgz#1800f77596694f3632e6c74897df2d965da01ac2"
+"@types/react-native@^0.43.7":
+  version "0.43.7"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.43.7.tgz#ca2f3d9c05156111e864da53022b70f1d78fd6af"
   dependencies:
     "@types/react" "*"
 

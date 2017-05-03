@@ -74,7 +74,7 @@ export default class Items extends Component<Props, State> {
                             {item.phone ? <Text style={styles.itemDetailsText}>Телефон: {item.phone}</Text> : null}
                         </Col>
                         <Col size={40} style={[styles.right, styles.itemDetailsIcons]}>
-                            {item.address_full ? <Link address={item.address_full}>
+                            {item.address_full ? <Link address={item.address_full} coords={{ lat: item.lat, lng: item.lng }}>
                                 <Icon name='ios-map-outline' style={styles.itemIcon}/>
                             </Link>: null}
                             {item.website ? <Link href={item.website}>
