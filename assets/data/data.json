@@ -1,0 +1,1025 @@
+{
+    "desc": "Добро пожаловать в путеводитель по Гааге от Paul van Bike",
+    "items": [{
+            "title": "Общие советы",
+            "icon": "flask",
+            "image": "teaser-welcome.webp",
+            "desc": "Мы собрали самое интересное для наших гостей. Приложение проложит маршруты и предложит транспорт. Работает оффлайн, но картам нужен интернет (один раз, для загрузки).",
+            "items": [{
+                    "title": "Транспорт",
+                    "image": "teaser-transport.webp",
+                    "desc": "Как передвигаться? Весь транспорт потрясающе удобен – быстрый, идеально точный. На поезде можно перевозить велосипеды.",
+                    "items": [{
+                            "title": "Гаага",
+                            "desc": "Гаага — один из наиболее удивительных городов Голландии. Не только потому, что в нём находится правительство, но и благодаря своим многочисленным памятникам, историческим районам и своему месторасположению на прекрасном североморском побережье. Гаага также известна как «Королевский город на море» и называется городом-резиденцией, поскольку многие члены голландской королевской семьи проживают в её живописных окрестностях. Везде в центре города есть бесплатный WiFi."
+                        },
+                        {
+                            "title": "Время работы магазинов",
+                            "desc": "Магазины работают 7 дней в неделю. Основная масса работает в будни с 10.00 до 19.00, по четвергам до 21.00. В воскресенье с 12.00 до 17.00. Веломагазины закрыты в воскресенье и понедельник. Круглосуточных супермаркетов нет."
+                        },
+                        {
+                            "title": "Аренда городских велосипедов",
+                            "desc": "The Bookstore (Noordeinde 39 A CA, 2514 GC   Den Haag) – совсем недалеко от Lola есть большой выбор городских велосипедов на любой вкус – обычные, тандемы, круизеры…",
+                            "lat": "52.081659",
+                            "lng": "4.306674",
+                            "address": "Nordeinde 91",
+                            "address_full": "Noordeinde 91, 2514 GD Den Haag, Nederland",
+                            "website": "http://www.rentabikethehague.nl/"
+                        },
+                        {
+                            "title": "Аренда шоссейных велосипедов",
+                            "desc": "В Paul van Bike всегда большой парк карбоновых шоссейных велосипедов всех размеров",
+                            "website": "http://www.paulvanbike.ru/rental/"
+                        },
+                        {
+                            "title": "Общественный транспорт",
+                            "desc": "Вся Голландия покрыта сеткой быстрого и комфортного общественного транспорта. Звучит неожиданно, но это действительно удобнее автомобилей! Стыковки между типами транспорта - идеально расчитаны. Установите приложение 9292 (в AppStore), и у вас на ладони сразу все виды транспорта - поезд, автобус, трамвай, паром. Такси и Uber здесь неприлично дороги и, на наш взгляд, практически не нужны. ",
+                            "website": "http://www.9292.nl"
+                        },
+                        {
+                            "title": "Поезд",
+                            "desc": "Билет покупается на станции в желтых автоматах. Карточку необходимо активировать перед поездкой, приложив к стойкам на перроне (вы увидите как это делают окружающие) или к сенсору турникта.\nВелосипед провозится за отдельную плату и разрешен к провозу в непиковые часы (нельзя с 7 до 9 утра и с 16 до 18.30).\nПоезда часто имеют бесплатный wifi доступ. Бесплатный wifi есть на абсолютно всех Ж/Д станциях.",
+                            "website": "http://www.ns.nl"
+                        },
+                        {
+                            "title": "Трамвай, автобус",
+                            "desc": "Билет покупается у водителя. Часто у них проблемы со сдачей, имейте мелочь. Карты не принимают. \nПроезд на 1 человека – около 3.5 евро, билет действует 90 минут.\nРекомендуем купить проездной на более длинный срок. Маршруты - всё там же, через приложение 9292."
+                        }
+                    ]
+                },
+                {
+                    "title": "Велоформа PvB",
+                    "image": "teaser-cycling-gear.webp",
+                    "desc": "Удобная профессиональная велоформа Paul van Bike, которую вы можете приобрести для себя",
+                    "items": [{
+                            "title": "Джерси Road",
+                            "desc": "Модель для серьезных райдеров. Основной материал – лайкра, по-бокам дышащие сетчатые панели. Подол оборудован силиконовыми противоскользящими вставками. Застежка-молния по всей длине. Классическое расположение 3 задних карманов, карман для ценных вещей с удобной молнией. Идеально подходит для спортивных и рекреационных поездок на средние дистанции.",
+                            "image": "pvb-cycling-kit-demo-jersey-road-front.webp",
+                            "pricetag": "71.50€",
+                            "website": "http://paulvanbike.ru/cycling-kit/?utm_source=pvb_app"
+                        },
+                        {
+                            "title": "Джерси Elite",
+                            "desc": "Модель для профессионалов. Основной матерал – лайкра, по-бокам  дышащие сетчатые панели. Рукава и плечи изготовлены из специального облегченного материала, обеспечивающего дополнительный комфорт. Подол оборудованы силиконовыми противоскользящими вставками. Скрытая застежка-молния по всей длине. Классическое расположение 3 задних карманов, карман для ценных вещей с удобной молнией.",
+                            "image": "pvb-cycling-kit-demo-jersey-elite-front.webp",
+                            "pricetag": "89.50€",
+                            "website": "http://paulvanbike.ru/cycling-kit/?utm_source=pvb_app"
+                        },
+                        {
+                            "title": "Шорты короткие",
+                            "desc": "Модель для средних и дальних дистанций. Высокая плотность бесшовного памперса и отличные эксплуатационные характеристики материала.",
+                            "image": "pvb-cycling-kit-demo-bibshort-front.webp",
+                            "pricetag": "99.50€",
+                            "website": "http://paulvanbike.ru/cycling-kit/?utm_source=pvb_app"
+                        },
+                        {
+                            "title": "Куртка демисезон",
+                            "desc": "Утепленная демисезонная куртка, предназначенная для использования при температурах ниже +15 С°, для дождливой и ветреной погоды. Это классическая куртка с длинным рукавом и задними карманами. Специальный дизайн скрывает большую часть грязи, которая может попасть на велогонщика в мокрую погоду.",
+                            "image": "pvb-cycling-kit-demo-jacket-front.webp",
+                            "pricetag": "120.50€",
+                            "website": "http://paulvanbike.ru/cycling-kit/?utm_source=pvb_app"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Центр Гааги",
+            "icon": "circle",
+            "image": "teaser-citycenter.webp",
+            "desc": "В Гааге большой пешеходный центр, и маршрут прогулки по карте составлять необязательно. В центре много маленьких улочек, везде высокая концентрация архитектурных красот, шопинга и ресторанов.",
+            "items": [{
+                    "title": "Музеи и экскурсии",
+                    "desc": "Только интересные музеи и экскурсии",
+                    "image": "teaser-museums.webp",
+                    "icon": "image",
+                    "items": [{
+                            "title": "Madurodam",
+                            "desc": "Голландия в миниатюре. Музей под открытым небом, собравший в себя достопримечательности всей страны. Много интерактива, движущихся моделей, игровых площадок. Детям будет интересно лет с 3х, взрослые тоже не могут оторваться.",
+                            "image": "madurodam.webp",
+                            "website": "http://www.madurodam.nl/en",
+                            "address": "George Maduroplein 1",
+                            "address_full": "George Maduroplein 1, 2584 RZ Den Haag, Nederland",
+                            "lat": "52.099476",
+                            "lng": "4.29693"
+                        },
+                        {
+                            "title": "Eischer Museum",
+                            "desc": "Музей гениального математика и художника, создававшего в черно-белой графике оптические иллюзии и геометрические иллюзии.",
+                            "image": "eischer.webp",
+                            "website": "http://www.escherinhetpaleis.nl",
+                            "address": "Lange Voorhout 74",
+                            "address_full": "Lange Voorhout 74, 2514 EH Den Haag, Nederland",
+                            "lat": "52.083433",
+                            "lng": "4.314323"
+                        },
+                        {
+                            "title": "Louwman Museum",
+                            "desc": "Музей не так известен, как немецкие музеи BMW или Mercedes, но по уровню коллекции не только не уступает, а пожалуй, в чём-то и превосходит их. Сам музей был открыт для публики несколько лет назад королевой Нидерландов Беатрикс. Хозяин музея голландский коллекционер и владелец сети автосалонов- Эверт Лоуман. Экспозиция состоит из 243 авто. Все машины находятся в рабочем состоянии. Многие из них сохранились в единичных экземплярах, а некоторые ни разу не реставрировались.",
+                            "image": "louwman.webp",
+                            "website": "http://www.louwmanmuseum.nl/",
+                            "address": "Leidsestraatweg 57",
+                            "address_full": "Leidsestraatweg 57, 2594 BB Den Haag, Nederland",
+                            "lat": "52.099701",
+                            "lng": "4.350779"
+                        },
+                        {
+                            "title": "Corpus",
+                            "desc": "Музей предлагает посетителям совершить увлекательную экскурсию по человеческому телу, вернее его гигантской модели. Во время путешествия Вы сможете видеть, чувствовать и слышать, как человеческое тело устроено и функционирует. Обратите внимание: cайт музея не рекомендует ходить с детьми до 8 лет.",
+                            "image": "corpus.webp",
+                            "website": "http://corpusexperience.nl/",
+                            "address": "Willem Einthovenstraat 1, Leiden (Oesgeest)",
+                            "address_full": "Willem Einthovenstraat 1, 2342 Oegstgeest, Nederland",
+                            "lat": "52.170515",
+                            "lng": "4.453622"
+                        },
+                        {
+                            "title": "Mauritshuis",
+                            "desc": "Небольшой дворец в центре Гааги, отреставрирован в 2016 году. С 1875 г. это картинная галерея с небольшим, но отборным собранием полотен голландских художников «золотого века» — Иоганнеса Вермеера, Рембрандта ван Рейна, Яна Стена, Паулюса Поттера и Франса Халса.",
+                            "image": "mauritshuis.webp",
+                            "website": "http://www.mauritshuis.nl",
+                            "address": "Plein 29",
+                            "address_full": "Plein 29, 2511 CS Den Haag, Nederland",
+                            "lat": "52.080421",
+                            "lng": "4.314301"
+                        },
+                        {
+                            "title": "Peace Palace",
+                            "desc": "Красивый замок в диснеевском стиле, тот самый, где заседает Международный суд ООН и третейский суд. Это красивое четырёхугольное здание с внутренним двориком и фонтаном, окружённое ландшафтным садом в английском стиле, воплотило мечту начала 20 века о мире во всём мире, которая тогда ещё казалась достижимой. В его истории существенную роль сыграла российская инициатива.",
+                            "image": "peacepalace.webp",
+                            "website": "https://www.vredespaleis.nl",
+                            "address": "Carnegieplein 2",
+                            "address_full": "Carnegieplein 2, 2517 KJ Den Haag, Nederland",
+                            "lat": "52.086591",
+                            "lng": "4.295602"
+                        },
+                        {
+                            "title": "Панорама Месдаха",
+                            "desc": "Уникальная картина, длина которой составляет 120 м, а высота – 14 м. На картине изображен вид на Северное море, открывавшийся тогда с самой высокой дюны Схевенингена (сейчас район Гааги). Для размещения полотна было специально построено цилиндрической формы музейное здание.",
+                            "image": "mesdag.webp",
+                            "website": "http://www.panorama-mesdag.nl",
+                            "address": "Laan van Meerdervoort 7F",
+                            "address_full": "Laan van Meerdervoort 7F, 2517 AB Den Haag, Nederland",
+                            "lat": "52.086008",
+                            "lng": "4.297741"
+                        },
+                        {
+                            "title": "Gemente Museum",
+                            "desc": "Главный общеобразовательный музей с самой большой коллекцией работ Мондриана. Сменные экспозиции на тему моды. Также построены 15 новых кабинетов, в центре экспозиций которых рукотворные произведения искусства мастеров Ближнего, Среднего и Дальнего Востока из стекла, гаагского серебра и фарфора, а также знаменитого дельфтского фарфора.",
+                            "image": "gemeente.webp",
+                            "website": "http://www.gemeentemuseum.nl",
+                            "address": "Stadhouderslaan 41",
+                            "address_full": "Stadhouderslaan 41, 2517 HV Den Haag, Nederland",
+                            "lat": "52.089913",
+                            "lng": "4.280655"
+                        },
+                        {
+                            "title": "Omniversum",
+                            "desc": "рядом с Gemente Museum демонстрируют научно-познавательные фильмы в формате 3D- кинотеатр Imax со сферическим экраном. Показы идут как на голландском, так и на английском языке, вход стоит десять евро, программа разнообразная, и каждый час можно испытать что-нибудь новенькое — подъем на Эверест, извержение вулкана, рафтинг по Большому каньону и т.д.",
+                            "image": "omniversum.webp",
+                            "website": "http://www.omniversum.nl",
+                            "address": "President Kennedylaan 5",
+                            "address_full": "President Kennedylaan 5, 2517 JK Den Haag, Nederland",
+                            "lat": "52.089249",
+                            "lng": "4.282035"
+                        },
+                        {
+                            "title": "Цветочная биржа Flora в Aalsmeer",
+                            "desc": "Отсюда уезжают свежие цветы по всему миру",
+                            "image": "flora.webp",
+                            "website": "https://www.royalfloraholland.com/en/about-floraholland/visit-the-flower-auction/aalsmeer/",
+                            "address": "Legmeerdijk, 1431 GB Aalsmeer",
+                            "address_full": "Legmeerdijk, 1431 GB Aalsmeer, Nederland",
+                            "lat": "52.260601",
+                            "lng": "4.783686"
+                        },
+                        {
+                            "title": "Рыбный аукцион в Scheveningen",
+                            "desc": "Важно: экскурсии только по пятницам и не каждую неделю. Узнать о ближайших рыбных экскурсиях можно на VVV Den Haag 070-3618860 или tours@denhaag.com",
+                            "image": "rondleiding.webp",
+                            "website": "http://unitedfishauctions.com/scheveningen/rondleiding-scheveningen",
+                            "address": "Visafslagweg 1",
+                            "address_full": "Visafslagweg 1, 2583 DM Den Haag, Nederland",
+                            "lat": "52.099519",
+                            "lng": "4.263361"
+                        }
+                    ]
+                },
+                {
+                    "title": "Еда: завтраки",
+                    "icon": "local_cafe",
+                    "desc": "Если завтрак в отеле надоел… Кстати, раньше 8 утра ничего не открывается.",
+                    "image": "teaser-breakfast.webp",
+                    "items": [{
+                            "title": "De Bakkerswinkel",
+                            "desc": "Отличные «здоровые» завтраки и великолепные джемы и лимонный курд домашнего приготовления",
+                            "image": "debakkerswinkel.webp",
+                            "website": "http://www.debakkerswinkel.nl/den-haag",
+                            "pricetag": "средний",
+                            "address": "Torenstraat 142",
+                            "address_full": "Torenstraat 142, 2513 BW Den Haag, Nederland",
+                            "lat": "52.0785650",
+                            "lng": "4.3037670"
+                        },
+                        {
+                            "title": "‘T Goude Hooft",
+                            "desc": "Рекомендуем попробовать голландские мини-блинчики poffertjes",
+                            "image": "tgoudehooft.webp",
+                            "website": "http://www.tgoudehooft.nl",
+                            "pricetag": "выше среднего",
+                            "address": "Dagelijkse Groenmarkt 13",
+                            "address_full": "Dagelijkse Groenmarkt 13, 2513 AL Den Haag, Nederland",
+                            "lat": "52.0782620",
+                            "lng": "4.3088110"
+                        },
+                        {
+                            "title": "Dudok пекарня",
+                            "desc": "Кафе знаменито своим фирменным национальным яблочным пирогом. Кроме сладкого есть полноценна кухня",
+                            "image": "dudok.webp",
+                            "website": "http://www.dudok.nl",
+                            "pricetag": "средний",
+                            "address": "Hofweg 1a",
+                            "address_full": "Hofweg 1A, 2511 AA Den Haag, Nederland",
+                            "lat": "52.0785220",
+                            "lng": "4.3117910"
+                        },
+                        {
+                            "title": "De Bieb",
+                            "desc": "Вкусные плотные завтраки в тихой атмосфере, в хорошую погоду красиво сидеть за столиком на собственной барже на воде. Безлимитный вкусный кофе!",
+                            "image": "debieb.webp",
+                            "pricetag": "средний",
+                            "address": "Veenkade 7-9",
+                            "address_full": "Veenkade 7, 2513 EE Den Haag, Nederland",
+                            "lat": "52.0800509",
+                            "lng": "4.302875999999969"
+                        },
+                        {
+                            "title": "Anne&Max",
+                            "desc": "Аппетитные завтраки с красивым видом на центральную церковь",
+                            "image": "annemax.webp",
+                            "pricetag": "средний",
+                            "address": "Kerkplein 4",
+                            "address_full": "Kerkplein 4, 2513 AZ Den Haag, Nederland",
+                            "lat": "52.0779741",
+                            "lng": "4.306975599999987"
+                        },
+                        {
+                            "title": "Yoghurg Barn",
+                            "desc": "Йогурты, мюсли интересных сочетаний. Очень здоровые завтраки",
+                            "image": "yoghurtbarn.webp",
+                            "address": "Plaats 25",
+                            "address_full": "Plaats 25, 2513 AD Den Haag, Nederland",
+                            "lat": "52.0797098",
+                            "lng": "4.3096680999999535"
+                        }
+
+                    ]
+                },
+                {
+                    "title": "Еда: рестораны",
+                    "desc": "Только рекомендованные рестораны",
+                    "icon": "restaurant",
+                    "image": "teaser-dinner.webp",
+                    "items": [{
+                            "title": "ГРЕЦИЯ: Knossos",
+                            "desc": "Рядом с достопримечательностью – главным собором города Grote Kerk",
+                            "image": "knossos.webp",
+                            "website": "http://www.knossosdenhaag.nl",
+                            "pricetag": "средний",
+                            "address": "Kerkplein 1",
+                            "address_full": "Kerkplein 1, 2513 AZ Den Haag, Nederland",
+                            "lat": "52.0780450",
+                            "lng": "4.3075640"
+                        },
+                        {
+                            "title": "ГРЕЦИЯ: Irodion",
+                            "desc": "На площади Grote Markt (на которой всегда можно выпить пива и любых других напитков), угол улиц Princegraht и Lutherse Burgwal. Поднимайтесь на 2й этаж. На первом кухня на вынос.",
+                            "image": "irodion.webp",
+                            "website": "http://www.irodiondenhaag.nl/",
+                            "pricetag": "ниже среднего, порции огромные",
+                            "address": "Grote Markt 19",
+                            "address_full": "Grote Markt 19, 2511 BG Den Haag, Nederland",
+                            "lat": "52.0753130",
+                            "lng": "4.3093560"
+                        },
+                        {
+                            "title": "ФРАНЦИЯ: Pastis",
+                            "desc": "Очень вкусный ресторан с настоящей французской кухней",
+                            "image": "pastis.webp",
+                            "website": "http://www.pastis.nl",
+                            "pricetag": "выше среднего",
+                            "address": "Oude Molstraat 57",
+                            "address_full": "Oude Molstraat 57, 2513 BA Den Haag, Nederland",
+                            "lat": "52.0797240",
+                            "lng": "4.3067480"
+                        },
+                        {
+                            "title": "КИТАЙ: Ming Dynasty",
+                            "desc": "Очень вкусно, держат китайцы. Кроме этого ресторана в Гааге есть свой полноценный Чайна Таун с большим количеством ресторанов – смело заходите в любой. Кстати там же можно и зайти в массажные салоны – за 30 евро косточки после тренировок разомнут",
+                            "image": "ming.webp",
+                            "pricetag": "ниже среднего",
+                            "address": "Spui 170",
+                            "address_full": "Spui 170, 2511 BW Den Haag, Nederland",
+                            "lat": "52.0766120",
+                            "lng": "4.3174860"
+                        },
+                        {
+                            "title": "МЕЖДУНАР: Haagsche Bluf",
+                            "desc": "В переводе – «Гаагские Понты». Вкусная международная кухня, терраса. Уютное проверенное место опять же в самом центре",
+                            "image": "haagschebluf.webp",
+                            "website": "http://www.grandcafehaagschebluf.nl/",
+                            "pricetag": "средний",
+                            "address": "Haagsche Bluf 3",
+                            "address_full": "Haagsche Bluf 3, 2511 CN Den Haag, Nederland",
+                            "lat": "52.0776890",
+                            "lng": "4.3090310"
+                        },
+                        {
+                            "title": "МЯСО: Taveerne De Resident",
+                            "desc": "Самые вкусные ребрышки. Меню там вроде большое, но все берут ребра, мы тоже больше ничего не пробовали :)",
+                            "image": "deresident.webp",
+                            "website": "http://www.deresident.nl/",
+                            "pricetag": "средний",
+                            "address": "Denneweg 58",
+                            "address_full": "Denneweg 58, 2514 CH Den Haag, Nederland",
+                            "lat": "52.0848950",
+                            "lng": "4.3125930"
+                        },
+                        {
+                            "title": "МЯСО: Los Argentinos",
+                            "desc": "Вкусного мяса в Голландии почти нет. Но эти аргентинцы готовят божественно!",
+                            "image": "losargentinos.webp",
+                            "website": "http://www.los-argentinos.nl/",
+                            "pricetag": "выше среднего",
+                            "address": "Kettingstraat 14",
+                            "address_full": "Kettingstraat 14, 2511 AN Den Haag, Nederland",
+                            "lat": "52.0780584",
+                            "lng": "4.310058"
+                        },
+                        {
+                            "title": "МЕКСИКА:Popocatepetl",
+                            "desc": "Кроме классических мексиканских начос, буритос и тортильяс отличный выбор коктейлей.",
+                            "image": "popo.webp",
+                            "website": "http://denhaag.popo.nl/",
+                            "pricetag": "ниже среднего",
+                            "address": "Buitenhof 5",
+                            "address_full": "Buitenhof 5, 2513 AG Den Haag, Nederland",
+                            "lat": "52.0783890",
+                            "lng": "4.3104360"
+                        },
+                        {
+                            "title": "СКАНДИНАВИЯ: Bog",
+                            "desc": "Высокая кухня нордических стран. Шеф – датчанин. Удивительная подача, нестандартные сочетания: тартар из макрели с зеленым яблоком, пенка из жаренной курицы и т.д. (меню сезонное, обновляется полностью раз в 2 месяца). Необходимо резервировать (можно онлайн)",
+                            "image": "bog.webp",
+                            "website": "https://xn--bg-lka.com/",
+                            "pricetag": "выше среднего, но ниже мишленовских ",
+                            "address": "Prinsestraat 130",
+                            "address_full": "Prinsestraat 130, 2513 CH Den Haag, Nederland",
+                            "lat": "52.0799530",
+                            "lng": "4.3039520"
+                        },
+                        {
+                            "title": "ИТАЛИЯ: Vapiano",
+                            "desc": "Вкусная паста собственного приготовления",
+                            "image": "vapiano.webp",
+                            "pricetag": "Ниже среднего",
+                            "address": "Buitenhof 45-5",
+                            "address_full": "Buitenhof 45, 2513 AH Den Haag, Nederland",
+                            "lat": "52.0790955",
+                            "lng": "4.3094495999999936"
+                        },
+                        {
+                            "title": "ИТАЛИЯ: Sapore",
+                            "desc": "Микроресторан с шикарной пастой. Баклажаны с сыром пармезан – пальчики оближешь!",
+                            "image": "sapore.webp",
+                            "pricetag": "ниже среднего",
+                            "address": "Molenstraat 30",
+                            "address_full": "Molenstraat 30, 2513 BL Den Haag, Nederland",
+                            "lat": "52.07971300000001",
+                            "lng": "4.30621050000002"
+                        },
+                        {
+                            "title": "ИТАЛИЯ: Sapore Turfmarkt",
+                            "desc": "Тот же Sapore, но чуть больше столиков",
+                            "image": "sapore-turfmarkt.webp",
+                            "pricetag": "ниже среднего",
+                            "address": "Turfmarkt 20",
+                            "address_full": "Turfmarkt 20, 2511 CA Den Haag, Nederland",
+                            "lat": "52.0780334",
+                            "lng": "4.31816989999993"
+                        },
+                        {
+                            "title": "ИТАЛИЯ: De Pasta Kantine",
+                            "desc": "Вкуснейшая паста и отличные летние столики в центре площади, удобно с велосипедом",
+                            "image": "pastakantine.webp",
+                            "pricetag": "средний",
+                            "address": "Prins Hendrikplein 15",
+                            "address_full": "Prins Hendrikplein 15, 2518 JC Den Haag, Nederland",
+                            "lat": "52.0819428",
+                            "lng": "4.29424199999994"
+                        },
+                        {
+                            "title": "ИТАЛИЯ: Made In Sud",
+                            "desc": "Вкуснейшая итальянская еда",
+                            "image": "madeinsud.webp",
+                            "pricetag": "средний",
+                            "address": "Molenstraat 9A",
+                            "address_full": "Molenstraat 9A, 2513 BH Den Haag, Nederland",
+                            "lat": "52.0801806",
+                            "lng": "4.307205899999985"
+                        }
+                    ]
+                },
+                {
+                    "title": "Еда: прочее",
+                    "image": "teaser-food-other.webp",
+                    "desc": "Это нельзя не съесть!",
+                    "icon": "star",
+                    "items": [{
+                            "title": "Голладнская селедка",
+                            "desc": "Haringkraam Buitenhof – самая знаменитая в Гааге палатка с селедкой. На входе в правительственный комплекс Buitenhof",
+                            "image": "haringkraam-buitenhof.webp",
+                            "website": "devishandel.nl",
+                            "address": "Buitenhof",
+                            "address_full": "Buitenhof, Den Haag, Nederland",
+                            "lat": "52.0792165",
+                            "lng": "4.310651600000028"
+                        },
+                        {
+                            "title": "Frites Atelier",
+                            "desc": "Картошка фри от… шеф-повара с ДВУМЯ мишленовскими звёздами Sergio Hermans! Потрясающе вкусные соусы и интересные комбинации. Там нет даже стоячих столиков, но… это стоит того!",
+                            "image": "frietatelier.webp",
+                            "pricetag": "Выше среднего",
+                            "address": "Venestraat 7",
+                            "address_full": "Venestraat 7, 2511 AR Den Haag, Nederland",
+                            "lat": "52.0777736",
+                            "lng": "4.309393900000032"
+                        },
+                        {
+                            "title": "РЫБА: Simonis (в Гавани)",
+                            "desc": "Пожалуй, один из лучших рыбных ресторанов. Находится прямо в порту. Лучшая селедка, устрицы и прочие свежие морепродукты.",
+                            "image": "simonis1.webp",
+                            "website": "http://www.www.simonis.nl",
+                            "pricetag": "средний",
+                            "address": "Visafslagweg 20",
+                            "address_full": "Visafslagweg 20, 2583 DM Den Haag, Nederland",
+                            "lat": "52.1007950",
+                            "lng": "4.2642480"
+                        },
+                        {
+                            "title": "РЫБА: Schmidt Zeevis (Rotterdam)",
+                            "desc": "Ресторан свежайшей рыбы и морских деликатесов от главного поставщика региона",
+                            "image": "schmidt.webp",
+                            "pricetag": "Выше среднего",
+                            "address": "Matlingeweg 333, 3044 EV Rotterdam",
+                            "address_full": "Matlingeweg 333, 3044 EV Rotterdam, Nederland",
+                            "lat": "51.9254945",
+                            "lng": "4.416243300000019"
+                        },
+                        {
+                            "title": "Friet District",
+                            "desc": "Super luxury snack bar, Картошка фри от известного шеф-повара, закуски и напитки.",
+                            "image": "frietdistrict.webp",
+                            "pricetag": "Выше среднего",
+                            "address": "Prinsestraat 73",
+                            "address_full": "Prinsestraat 73, 2513 CB Den Haag, Nederland",
+                            "lat": "52.0796627",
+                            "lng": "4.3046882999999525"
+                        }
+                    ]
+                },
+                {
+                    "title": "Пиво",
+                    "desc": "Потрясающее пиво Голландии и Бельгии, сотни сортов",
+                    "image": "teaser-bier.webp",
+                    "icon": "beer",
+                    "items": [{
+                            "title": "Rootz",
+                            "desc": "сотни сортов малых пивоварен Голландии, Бельгии, Ирландии и т.д. Копченое пиво, клубничное, тестовые сеты, классика, бутылочное и разливное. Здесь же можно и поужинать. По вечерам чт- пт-сб концерты",
+                            "image": "rootz.webp",
+                            "website": "http://www.rootz.nl/en",
+                            "pricetag": "средний",
+                            "address": "Grote Maarktstraat 14",
+                            "address_full": "Grote Marktstraat 14, 2511 BJ Den Haag, Nederland",
+                            "lat": "52.0759000",
+                            "lng": "4.3100040"
+                        },
+                        {
+                            "title": "The Fiddler",
+                            "desc": "Микро-пивоварня. Очень демократичное место с хорошим пивом своего изготовления и привезенного, обычно там много студентов",
+                            "image": "fiddler.webp",
+                            "website": "http://www.fiddler.nl/",
+                            "pricetag": "ниже среднего",
+                            "address": "Riviervismarkt 1",
+                            "address_full": "Riviervismarkt 1, 2513 AM Den Haag, Nederland",
+                            "lat": "52.0770590",
+                            "lng": "4.3074910"
+                        },
+                        {
+                            "title": "Bierspeciaal Café De Paas",
+                            "desc": "Пивной бар с поистине бесконечной пивной картой",
+                            "image": "paas.webp",
+                            "address": "Dunne Bierkade 16-A",
+                            "address_full": "Dunne Bierkade 16-A, 2512 BC Den Haag, Nederland",
+                            "lat": "52.073497",
+                            "lng": "4.315536"
+                        },
+                        {
+                            "title": "Café De La Gare",
+                            "desc": "Небольшой локальный бар с хорошим ассортиментом",
+                            "image": "delagare.webp",
+                            "address": "Nieuwe Schoolstraat 13A",
+                            "address_full": "Nieuwe Schoolstraat 13A, 2514 HT Den Haag, Nederland",
+                            "lat": "52.0843632",
+                            "lng": "4.311812599999939"
+                        },
+                        {
+                            "title": "Pierre",
+                            "desc": "Уникальный винный бар",
+                            "image": "pierre.webp",
+                            "pricetag": "Выше среднего",
+                            "address": "Denneweg 11",
+                            "address_full": "Denneweg 11, 2514 CB Den Haag, Nederland",
+                            "lat": "52.0849061",
+                            "lng": "4.312825900000007"
+                        }
+                    ]
+                },
+                {
+                    "title": "Тусовочные барные площади",
+                    "desc": "Шумные тусовочные места, бурлят жизнью в четверг, пятницу и субботу",
+                    "icon": "local_bar",
+                    "image": "teaser-party.webp",
+                    "items": [{
+                            "title": "Plein",
+                            "desc": "Бары, клубы, по четвергам активная тусовка",
+                            "image": "plein.webp",
+                            "address": "Plein",
+                            "address_full": "Plein, Den Haag, Nederland",
+                            "lat": "52.0796850",
+                            "lng": "4.3152890"
+                        },
+                        {
+                            "title": "Grote Markt",
+                            "desc": "Бары, по четвергам активная тусовка",
+                            "image": "grotemarkt.webp",
+                            "address": "Grote Markt 1",
+                            "address_full": "Grote Markt 1, 2511 BG Den Haag, Nederland",
+                            "lat": "52.0761470",
+                            "lng": "4.3085130"
+                        }
+                    ]
+                },
+                {
+                    "title": "Продукты",
+                    "desc": "Свежие фрукты, запрещёнка и так далее",
+                    "image": "teaser-shop.webp",
+                    "icon": "shopping_cart",
+                    "items": [{
+                            "title": "Albert Heijn",
+                            "desc": "Основная сеть супермаркетов Голландии. Есть всё что нужно.",
+                            "image": "ah.webp",
+                            "address": "Torenstraat 27",
+                            "address_full": "Torenstraat 27, 2513 BN Den Haag, Nederland",
+                            "lat": "52.0778943",
+                            "lng": "4.306517500000041"
+                        },
+                        {
+                            "title": "Albert Heijn 2",
+                            "desc": " Основная сеть супермаркетов Голландии. Есть всё что нужно.",
+                            "image": "ah.webp",
+                            "address": "Grote Marktstraat 55A",
+                            "address_full": "Grote Marktstraat 55A, 2511 BH Den Haag, Nederland",
+                            "lat": "52.076599",
+                            "lng": "4.3128114999999525"
+                        },
+                        {
+                            "title": "Albert Heijn XL",
+                            "desc": " Гипермаркет XL с большим выбором",
+                            "image": "ah.webp",
+                            "address": "Elandstraat 160",
+                            "address_full": "Elandstraat 160, 2513 GW Den Haag, Nederland",
+                            "lat": "52.0794249",
+                            "lng": "4.2962316000000556"
+                        },
+                        {
+                            "title": "Marqt",
+                            "desc": "Магазин премиального уровня с лучшими деликатесами, сыры, мясо, фрукты.",
+                            "image": "marqt.webp",
+                            "address": "Hofweg 11",
+                            "address_full": "Hofweg 11, 2511 AA Den Haag, Nederland",
+                            "lat": "52.0782878",
+                            "lng": "4.31254720000004"
+                        },
+                        {
+                            "title": "SPAR",
+                            "desc": "Небольшой магазин шаговой дступноси в центре",
+                            "image": "spar.webp",
+                            "address": "Korte Poten 9",
+                            "address_full": "Korte Poten 9, 2511 EB Den Haag, Nederland",
+                            "lat": "52.0797037",
+                            "lng": "4.317243500000018"
+                        }
+                    ]
+                },
+                {
+                    "title": "Прочее",
+                    "desc": "Прочие полезные места",
+                    "icon": "menu",
+                    "image": "teaser-otherplaces.webp",
+                    "items": [{
+                            "title": "Caesar",
+                            "desc": "Универсальный спортивный центр и салон с массажными, спа и бьюти процедурами",
+                            "image": "caesar.webp",
+                            "address": "Mauritskade 10",
+                            "address_full": "Mauritskade 10, 2514 Den Haag, Nederland",
+                            "website": "http://www.caesar-denhaag.nl/en/behandelingen/ ",
+                            "lat": "52.3599600",
+                            "lng": "4.9104250"
+                        },
+                        {
+                            "title": "Massage Sense",
+                            "desc": "проверенный добротный салон со специализированными видами массажа, в том числе спорт.",
+                            "image": "massagesense.webp",
+                            "address": "Zoutmanstraat 26B",
+                            "address_full": "Zoutmanstraat 26B, 2518 GR Den Haag, Nederland",
+                            "website": "https://massagesense.nl/services/",
+                            "lat": "52.0815560",
+                            "lng": "4.2953530"
+                        },
+                        {
+                            "title": "Массажные салоны в Китайском квартале",
+                            "desc": "в Гааге есть свой полноценный Чайна Таун с большим количеством массажных салонов – смело заходите в любой, за 30 евро (только наличные) косточки после тренировок разомнут.",
+                            "image": "chinatown.webp",
+                            "address": "Chinatown",
+                            "address_full": "Chinatown, Den Haag, Nederland",
+                            "lat": "52.0745550",
+                            "lng": "4.3159020"
+                        },
+                        {
+                            "title": "Термы",
+                            "desc": "В удалении. На полдня или даже на весь день, быть готовым к тому что все голые, мужчины и женщины вместе. У терм интересная планировка: небольшой закрытый парк под открытым небом с отдельными домиками- саунами и купелями. Охлаждаешься на свежем воздухе между заходом в парилки. Находится в 30км от Гааги. Хороший ресторан внутри.",
+                            "image": "thermenholiday.webp",
+                            "website": "http://www.thermenholiday.nl/ons-resort/faciliteiten",
+                            "address": "Princes Beatrixlaan 10 3121 JN Schiedam",
+                            "address_full": "Princes Beatrixlaan 10 3121 JN Schiedam, Nederland",
+                            "lat": "51.9271810",
+                            "lng": "4.3775530"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Гавань и набережная",
+            "icon": "ship",
+            "desc": "Берег - это, прежде всего, пляжи. Но есть и пара обязательных к посещению ресторанов!",
+            "image": "teaser-scheveningen.webp",
+            "items": [{
+                    "title": "Пирс",
+                    "desc": "Визитная карточка Гаагского побережья, странная космическая постройка уходящая далеко от берега. Сейчас там ярмарки и фудкорт.",
+                    "image": "pier.webp",
+                    "website": "http://www.pier.nl/",
+                    "address": "Strandweg 150-154",
+                    "address_full": "Strandweg 150, 2586 JW Den Haag, Nederland",
+                    "lat": "52.1169920",
+                    "lng": "4.2806020"
+                },
+                {
+                    "title": "Simonis",
+                    "desc": "Catch и Simonis – оба ресторана принадлежат одному владельцу. Но Simonis это «столовка» со свежими морепродуктами, где громко выкрикивают номер вашего заказа и все приносят в пластиковой посуде, и это место настоящего паломничества для любителей вкусной рыбы. Попробовать стоит оба!  Есть еще небольшая палатка в самом центре набережной напротив отеля Kurhaus (временный павильон) - это то же качество но совсем не тот антураж. Лучшая селедка, устрицы и прочие свежие морепродукты.",
+                    "image": "simonis1.webp",
+                    "website": "http://www.www.simonis.nl",
+                    "pricetag": "средний",
+                    "address": "Visafslagweg 20",
+                    "address_full": "Visafslagweg 20, 2583 DM Den Haag, Nederland",
+                    "lat": "52.1007950",
+                    "lng": "4.2642480"
+                },
+                {
+                    "title": "Catch by Simonis",
+                    "desc": "Catch и Simonis – оба ресторана принадлежат одному владельцу. Catch by Simonis – это прекрасный интерьер, сервировка, выбор вин, идеальная кухня и чуть более высокий ценник. Попробовать стоит оба!",
+                    "image": "simoniscatch.webp",
+                    "website": "http://catch-bysimonis.nl/",
+                    "pricetag": "высокий",
+                    "address": "Dr Lelykade 43",
+                    "address_full": "Doctor Lelykade 43, 2583 CL Den Haag, Nederland",
+                    "lat": "52.0945400",
+                    "lng": "4.2649350"
+                },
+                {
+                    "title": "Океанариум Sea Life",
+                    "desc": "Конечно небольшой, но есть на что посмотреть, особенно нравится детям.",
+                    "image": "sealife.webp",
+                    "website": "https://www.visitsealife.com/scheveningen/en/",
+                    "address": "Strandweg 13",
+                    "address_full": "Strandweg 13, 2586 JK Den Haag, Nederland",
+                    "lat": "52.1122620",
+                    "lng": "4.2793680"
+                },
+                {
+                    "title": "Barbarossa",
+                    "desc": "Любимое пляжное место местных жителей. Находится немного в отдалении. Если стоять лицом к Пирсу, то он будет по правую руку, примерно в 15 мин ходьбы.",
+                    "pricetag": "выше среднего",
+                    "image": "barbarossabeach.webp",
+                    "website": "https://www.barbarossabeach.nl",
+                    "address": "Zwarte Pad 61",
+                    "address_full": "Zwarte Pad 61, 2586 JL Den Haag, Nederland",
+                    "lat": "52.1199840",
+                    "lng": "4.2912810"
+                },
+                {
+                    "title": "Crazy pianos",
+                    "desc": "Вечерний фан, живая музыка, ужин, танцы по выходным в Crazy pianos. Музыканты не только поют, но и устраивают что-то вроде стендап камеди. ",
+                    "image": "crazypianos.webp",
+                    "website": "https://www.crazypianos.nl",
+                    "address": "Strandweg 21",
+                    "address_full": "Strandweg 21, 2586 ZZ Den Haag, Nederland",
+                    "lat": "52.1133970",
+                    "lng": "4.2813790"
+                }
+            ]
+        },
+        {
+            "title": "Спорт, Велошопинг",
+            "icon": "bicycle",
+            "desc": "Голландия наполнена спортом и веломагазинами, есть практически всё. Вы же сюда приехали не отдыхать? :)",
+            "image": "teaser-cyclingshopping.webp",
+            "items": [{
+                    "title": "Lola Bikes – партнёр PvB",
+                    "desc": "Восхитительное велокафе,  кастомные велосипеды, аксессуары, книги",
+                    "image": "lola.webp",
+                    "address": "Noordeinde 91",
+                    "address_full": "Noordeinde 91, 2514 GD Den Haag, Nederland",
+                    "website": "http://www.lolabikesandcoffee.nl",
+                    "lat": "52.0825570",
+                    "lng": "4.3056020"
+                },
+                {
+                    "title": "Van Herwerden – партнёр PvB",
+                    "desc": "Магазин для профессионалов с амбициями. Отличный выбор шоссейных, горных и кроссовых велосипедов, большой выбор оджды. Марки – Specialised, Cannondale, Stevens. Можно сделать байк-фит.",
+                    "image": "vanherwerden.webp",
+                    "address": "Laan van Nieuw Oosteinde 100, 2274EK Voorburg",
+                    "address_full": "Laan van Nieuw Oosteinde 100, 2274EK Voorburg, Nederland",
+                    "website": "http://www.vanherwerden.nl",
+                    "lat": "52.0706840",
+                    "lng": "4.3538040"
+                },
+                {
+                    "title": "Provelo – партнёр PvB",
+                    "desc": "Москва: Магазин профессиональных спортивных велосипедов, итальянской велосипедной одежды и велоаксессуаров",
+                    "image": "provelo.webp",
+                    "address": "Москва, ул. Крылатская, д. 10",
+                    "address_full": "Крылатская улица, 10, Москва, 121552, Россия",
+                    "website": "http://www.provelo.ru"
+                },
+                {
+                    "title": "Top Bikes",
+                    "desc": "Небольшой магазин [в ближайшей к центру доступности]. Спортивные и городские велосипеды, эквип, ремонт.",
+                    "image": "topbikes.webp",
+                    "address": "Elandstraat 89",
+                    "address_full": "Elandstraat 89, 2513 GM Den Haag, Nederland",
+                    "website": "http://www.topbikes.nl",
+                    "lat": "52.0807940",
+                    "lng": "4.2969890"
+                },
+                {
+                    "title": "БЕГ: Парк Haagse Bos",
+                    "desc": "Парк, в котором укромно спрятан домик королевы. Основной парк начинается через дорогу (обежать её справа)",
+                    "image": "haagsebos.webp",
+                    "address": "Haagse Bos",
+                    "address_full": "Boslaan 10 2594 NB Den Haag, Nederland",
+                    "lat": "52.085545",
+                    "lng": "4.316833"
+                },
+                {
+                    "title": "БЕГ: Парк Scheveningse Bosjes",
+                    "desc": "Отличный парк для бега",
+                    "image": "scheveningsebosjes.webp",
+                    "address": "Ary van der Spuyweg 1",
+                    "address_full": "Ary van der Spuyweg 1, 2585 JA Den Haag, Nederland",
+                    "lat": "52.089949",
+                    "lng": "4.294152"
+                },
+                {
+                    "title": "БЕГ: Дюны",
+                    "desc": "Стартовая точка для бега в дюнах. Рядом море для плавания.",
+                    "image": "duinen.webp",
+                    "address": "Pompstationsweg 353",
+                    "address_full": "Pompstationsweg 353, 2597 JV Den Haag, Nederland",
+                    "lat": "52.11785099999999",
+                    "lng": "4.30600800000002"
+                },
+                {
+                    "title": "ПЛАВАНИЕ: Caesar",
+                    "desc": "Бассейн 20 метров внутри универсального спортивного центра и салона с массажными, спа и бьюти процедурами.",
+                    "image": "caesar.webp",
+                    "address": "Mauritskade 10",
+                    "address_full": "Mauritskade 10, 2514 Den Haag, Nederland",
+                    "website": "http://www.caesar-denhaag.nl/en/behandelingen/ ",
+                    "lat": "52.3599600",
+                    "lng": "4.9104250"
+                }
+
+            ]
+        },
+        {
+            "title": "Впечатления и события",
+            "icon": "star",
+            "desc": "Всё для фана и эмоций. В Гааге постоянно проходят интересные фестивали. Мы стараемся держать раздел обновлённым, он регулярно пополняется.",
+            "image": "teaser-fun.webp",
+            "items": [{
+                    "title": "События в дни кэмпа",
+                    "desc": "Интересные мероприятия, проходящие в даты велокэмпов – раздел наполнняется",
+                    "image": "teaser-fun.webp",
+                    "items": [{
+                            "title": "King's Day",
+                            "desc": "Главный национальный праздник King’s Day (День Короля Нидерландов) в Гааге и Амстердаме (он пройдёт через пару дней после кэмпа, 27 апреля)"
+                        },
+                        {
+                            "title": "Keukenhof",
+                            "desc": "Главный мировой парк цветов Keukenhof неподалёку (работает два месяца в году)"
+                        },
+                        {
+                            "title": "Life I live",
+                            "desc": "Музыкальный фестиваль Life I Live в Гааге"
+                        },
+                        {
+                            "title": "Неделя Музеев",
+                            "desc": "Неделя национальных музеев в Амстердаме"
+                        },
+                        {
+                            "title": "Полный список: портал событий",
+                            "desc": "Городской портал, на котором собраны все основные события",
+                            "website": "https://denhaag.com/en/"
+                        }
+                    ]
+                },
+                {
+                    "title": "Яркие впечатления",
+                    "desc": "Разнообразные места и развлечения для фана и эмоций",
+                    "image": "teaser-fun.webp",
+                    "items": [{
+                            "title": "Экскурсии на лодке по каналам",
+                            "desc": "Красивые экскурсии длиной около часа по водным артериям Гааги",
+                            "image": "ooievaart.webp",
+                            "website": "http://www.ooievaart.nl/en/"
+                        },
+                        {
+                            "title": "Ужин в трамвае",
+                            "desc": "Ужин в трамвае, ездящем по центру Гааги. Это скорее романтическое мероприятие или узким кругом друзей. Рекомендуется резервировать заранее!",
+                            "image": "hoftrammm.webp",
+                            "website": "http://www.hoftrammm.nl/en"
+                        },
+                        {
+                            "title": "Плавающее джакузи",
+                            "desc": "Вы можете насладиться горячей ванной совместив с экскурсией по каналам Роттердама. Нужно ехать с группой безбашенных друзей. Алкоголь включен, можно прыгать за борт, чтобы охладиться :) ",
+                            "image": "hottug.webp",
+                            "website": "http://www.hottug.nl/fotos_en.htm"
+                        },
+                        {
+                            "title": "Очень скоростной катер в море",
+                            "desc": "Прокатит вас с ветерком и задором по прибрежным волнам Гааги",
+                            "image": "gofastscheveningen.webp",
+                            "website": "http://gofastscheveningen.nl/"
+                        },
+                        {
+                            "title": "Улицы красных фонарей",
+                            "desc": "В Гааге их две, они не так знамениты как Амстердамские и не такие туристические. Поменьше и более центральная Doubletstraat и побольше Geleenstraat and Hunsestraat. В отличие от Амстердама они менее театральны и очень, кхе-кхе, «функциональны».",
+                            "image": "redlights.webp"
+                        },
+                        {
+                            "title": "Кофешопы",
+                            "desc": "Их много, надо просто внимательно держать нос по ветру ))) рекомендовать можем Cremers на Prinsestraat 84. Большой, красивый, известный, надежный.",
+                            "image": "smoke.webp",
+                            "website": "http://www.cremers.nl",
+                            "address": "Prinsestraat 84",
+                            "address_full": "Prinsestraat 84, 2513 CG Den Haag, Nederland",
+                            "lat": "52.0792290",
+                            "lng": "4.3048580"
+                        },
+                        {
+                            "title": "Нудистский пляж",
+                            "desc": "Если продолжать стоять лицом к Пирсу, идти направо порядка 15-20 мин в дюны, то вы окажетесь на местном нудистском пляже. Он никак не огорожен. Располагайтесь поудобнее :)",
+                            "image": "nudist.webp",
+                            "address": "Noorderstrand 2",
+                            "address_full": "Noorderstrand 2, 2586 JM Den Haag, Nederland",
+                            "lat": "52.1239770",
+                            "lng": "4.2973500"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Рядом с Гаагой",
+            "icon": "train",
+            "desc": "Куда и как перемещаться. Города и места, которые стоит посетить, а также вокзалы.",
+            "image": "teaser-around.webp",
+            "items": [{
+                    "title": "Delft (Дельфт)",
+                    "desc": "можно доехать на трамвае или поезде. Рекомендуем гулять, наслаждаться каналами заросшими лилиями. Можно посетить музей фарфора http://www.royaldelft.com/",
+                    "image": "delft.webp",
+                    "address": "Delft",
+                    "address_full": "Delft, Nederland",
+                    "lat": "52.0115770",
+                    "lng": "4.3570680"
+                },
+                {
+                    "title": "Leiden (Ляйден)",
+                    "desc": "поезд идет порядка 15 мин. Гулять вдоль каналов, прокатиться на лодочке.",
+                    "image": "leiden.webp",
+                    "address": "Leiden",
+                    "address_full": "Leiden, Nederland",
+                    "lat": "52.1601140",
+                    "lng": "4.4970100"
+                },
+                {
+                    "title": "Gouda (Гауда)",
+                    "desc": "поезд около 20 мин. По четвергам с 7 апреля до 1 сентября в самом центре города работает сырный рынок утром с 10-00 до 12-30",
+                    "image": "gouda.webp",
+                    "website": "http://www.welkomingouda.nl/en/cheese/gouda-cheese-market",
+                    "address": "Gouda",
+                    "address_full": "Gouda, Nederland",
+                    "lat": "52.0115210",
+                    "lng": "4.7104630"
+                },
+                {
+                    "title": "Гаага: центральный вокзал",
+                    "desc": "Главный вокзал Гааги",
+                    "image": "denhaagcentraal.webp",
+                    "address": "Koningin Julianaplein 95",
+                    "address_full": "Koningin Julianaplein 95, 2595 AA Den Haag, Nederland",
+                    "lat": "52.08220439999999",
+                    "lng": "4.322617799999989"
+                },
+                {
+                    "title": "Гаага: дюны",
+                    "desc": "Стартовая точка для маршрутов в дюнах",
+                    "image": "duinen.webp",
+                    "address": "Pompstationsweg 353",
+                    "address_full": "Pompstationsweg 353, 2597 JV Den Haag, Nederland",
+                    "lat": "52.11785099999999",
+                    "lng": "4.30600800000002"
+                },
+                {
+                    "title": "Hoek van Holland",
+                    "desc": "Угол Голландии, крайняя точка наших маршрутов, красивый пляж и вид на корабли и порт",
+                    "image": "hoek.webp",
+                    "address": "Zeekant 81, 3151 HW Hoek van Holland",
+                    "address_full": "Zeekant 81, 3151 HW Hoek van Holland, Nederland",
+                    "lat": "51.9872279",
+                    "lng": "4.103859599999964"
+                }
+            ]
+        },
+        {
+            "title": "Контакты",
+            "icon": "smartphone",
+            "iconColor": "e7ac3c",
+            "desc": "Самые важные контакты",
+            "image": "teaser-mostimportant.webp",
+            "items": [{
+                    "title": "EMERGENCY",
+                    "phone": "112",
+                    "desc": "Общий единый телефон служб эстренной помощи"
+                },
+                {
+                    "title": "Максим Горбачевский",
+                    "phone": "+31 629 820148",
+                    "desc": "основной телефон + SMS + Telegram",
+                    "address": "Tollensstraat 91, 2513GC Den Haag",
+                    "address_full": "Tollensstraat 91, 2513GC Den Haag, Nederland"
+                },
+                {
+                    "title": "Олег Лукьянов",
+                    "phone": "+31 655 217860",
+                    "desc": "основной + SMS + Telegram + WhatsApp"
+                },
+                {
+                    "title": "Lola Cycling",
+                    "address": "Noordeinde 91, 2514 GD Den Haag",
+                    "address_full": "Noordeinde 91, 2514 GD Den Haag, Nederland",
+                    "desc": "основной + SMS + Telegram + WhatsApp",
+                    "website": "http://www.lolabikesandcoffee.nl"
+                },
+                {
+                    "title": "Аптека",
+                    "address": "Jan Hendrikstraat 18",
+                    "address_full": "Jan Hendrikstraat 18, 2512 GL Den Haag, Nederland",
+                    "lat": "52.07611499999999",
+                    "lng": "4.307263599999942"
+                },
+                {
+                    "title": "Максим Горбачевский - WhatsApp",
+                    "phone": "+7 (916) 672 93 29",
+                    "desc": "номер для WhatsApp"
+                },
+                {
+                    "title": "Ограничение ответственности",
+                    "desc": "Paul van Bike и DvaPlus не несут ответственности за указанные в настоящем приложении советы и за уровень оказанного сервиса. Paul van Bike и DvaPlus не аффилированы с указанными компаниями. Все права на изображения сохраняются за правообладателями."
+                }
+            ]
+        }
+    ]
+}
