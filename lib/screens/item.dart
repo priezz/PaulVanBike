@@ -4,7 +4,7 @@ import 'package:paulvanbike/widgets/link_icon.dart';
 import 'package:paulvanbike/widgets/statusbar.dart';
 
 
-TextStyle detailsStyle() => TextStyle(color: Colors.white, fontSize: 14);
+final TextStyle detailsStyle = TextStyle(color: Colors.white, fontSize: 14);
 
 class Item extends StatelessWidget {
     final dynamic item;
@@ -52,10 +52,10 @@ class Item extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                         item['pricetag'] != null
-                                            ? Text('Ценник: ${item['pricetag']}', style: detailsStyle())
+                                            ? Text('Ценник: ${item['pricetag']}', style: detailsStyle)
                                             : Container(),
                                         item['address'] != null
-                                            ? Text('Адрес: ${item['address']}', style: detailsStyle())
+                                            ? Text('Адрес: ${item['address']}', style: detailsStyle)
                                             : Container(),
                                     ],
                                 )),
